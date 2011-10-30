@@ -1,0 +1,4 @@
+permalink: /:year/:title/
+paginate: 100
+baseurl: /loonypandora.github.com
+name: Daft Cow?
