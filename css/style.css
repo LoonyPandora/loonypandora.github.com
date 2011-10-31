@@ -2,16 +2,11 @@
 /* General Stuff
 ================================================== */
 
-html {
-    background: #f00;
-}
-
 body {
-    background: #f0f0f0;
+    background:  #a4d53e url('../img/bg.png');
     font-size:   16px;
     line-height: 20px;
-    width: 1280px;
-    margin: 0 auto 0 auto;
+    padding:     20px 0 60px 0;
 }
 
 p {
@@ -21,31 +16,34 @@ p {
 }
 
 .container {
-  -webkit-transition: 0.1s linear all;
-     -moz-transition: 0.1s linear all;
-      -ms-transition: 0.1s linear all;
-       -o-transition: 0.1s linear all;
-          transition: 0.1s linear all;
+    -webkit-transition: 0.1s linear all;
+       -moz-transition: 0.1s linear all;
+        -ms-transition: 0.1s linear all;
+         -o-transition: 0.1s linear all;
+            transition: 0.1s linear all;
 }
 
 .block {
     width:      260px;
     height:     260px;
     margin:     10px;
-    border:     20px solid #ccc;
+    border:     20px solid #e4e4e4;
     float:      left;
-    background: #ccc;
+    background: #e4e4e4;
     position:   relative;
     overflow:   hidden;
     -webkit-border-radius: 2px;
        -moz-border-radius: 2px;
             border-radius: 2px;
+    -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+       -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+            box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 }
 
 h1 {
     text-align:     center;
     text-transform: uppercase;
-    font-size:      75px;
+    font-size:      74px;
     line-height:    58px;
     letter-spacing: -3px;
     margin-bottom:  24px;
