@@ -2,8 +2,11 @@
 /* General Stuff
 ================================================== */
 
+html, body{
+    background:#a4d53e url('../img/bg.png');
+}
+
 body {
-    background:  #a4d53e url('../img/bg.png');
     font-size:   16px;
     line-height: 20px;
     padding:     20px 0 60px 0;
@@ -24,12 +27,12 @@ p {
 }
 
 .block {
+    float:      left;
     width:      260px;
     height:     260px;
     margin:     10px;
-    border:     20px solid #e4e4e4;
-    float:      left;
-    background: #e4e4e4;
+    border:     20px solid #f3f3f3;
+    background: #f3f3f3;
     position:   relative;
     overflow:   hidden;
     -webkit-border-radius: 2px;
@@ -57,6 +60,37 @@ h2 {
 }
 
 
+.daftcow {
+    margin:  0 auto 0 auto;
+    display: block;
+}
+
+.contact {
+    list-style: none;
+    margin: 0;
+}
+
+.contact li {
+    float:  left;
+    margin: 0 0 0 10px;
+}
+
+.contact :first-child {
+    margin-left: 0;
+}
+
+.contact a {
+    display:    block;
+    width:      80px;
+    height:     80px;
+    background: #999;
+}
+
+
+.contact a:hover {
+    background: #ccc;
+}
+
 
 
 /* Media Queries
@@ -75,10 +109,3 @@ h2 {
 @media screen and (min-width:1000px) {
     .container { width: 960px; }
 }
-
-@media screen and (min-width:1400px) {
-    .container { width: 1280px; }
-}
-
-
-
