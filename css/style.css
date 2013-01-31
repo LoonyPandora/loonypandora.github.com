@@ -1,35 +1,42 @@
-/* General Stuff
+/* Styles for everything
 ================================================== */
 
-html, body{
-    background: #a4d53e url('../img/bg.png');
-}
+html, body { margin: 0; background: #a4d53e url('../img/bg.png'); }
 
 body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:       #333;
     font-size:   16px;
     line-height: 20px;
     padding:     20px 0 60px 0;
 }
 
-::-moz-selection {
-    background: #84b51e;
-    color: #fff;
-    text-shadow: none;
+p { margin: 0 0 20px 0; }
+
+a       { color: #0088cc; text-decoration: none;      }
+a:hover { color: #005580; text-decoration: underline; }
+
+h1, h2 { text-rendering: optimizelegibility; }
+
+h1 {
+    text-align:     center;
+    text-transform: uppercase;
+    font-size:      74px;
+    line-height:    58px;
+    letter-spacing: -3px;
+    margin:         0 0 24px 0;
 }
 
-::selection {
-    background: #84b51e;
-    color: #fff;
-    text-shadow: none;
-}
-
-p {
-    font-size:   inherit;
-    line-height: inherit;
-    margin:      0 0 20px 0;
+h2 {
+    font-size:      31px;
+    line-height:    30px;
+    letter-spacing: -1px;
+    margin:         0 0 20px 0;
 }
 
 .container {
+    width: 320px;
+    margin: 0 auto;
     -webkit-transition: 0.1s linear all;
        -moz-transition: 0.1s linear all;
         -ms-transition: 0.1s linear all;
@@ -54,30 +61,15 @@ p {
             box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 }
 
-h1 {
-    text-align:     center;
-    text-transform: uppercase;
-    font-size:      74px;
-    line-height:    58px;
-    letter-spacing: -3px;
-    margin:         0 0 24px 0;
-}
-
-h2 {
-    font-size:      31px;
-    line-height:    30px;
-    letter-spacing: -1px;
-    margin:         0 0 20px 0;
-}
-
 .daftcow {
-    margin:  0 auto 0 auto;
+    margin:  0 auto;
     display: block;
 }
 
 .contact {
     list-style: none;
-    margin: 0;
+    margin:     0;
+    padding:    0;
 }
 
 .contact li {
@@ -85,7 +77,7 @@ h2 {
     margin: 0 0 0 10px;
 }
 
-.contact :first-child {
+.contact li:first-child {
     margin-left: 0;
 }
 
@@ -101,11 +93,22 @@ h2 {
 }
 
 
+/* Psuedo Thingies
+================================================== */
+
+::-moz-selection {
+    background: #84b51e;
+    color: #fff;
+}
+
+::selection {
+    background: #84b51e;
+    color: #fff;
+}
+
 
 /* Media Queries
 ================================================== */
-
-.container { width: 320px; }
 
 @media screen and (min-width:400px) {
     .container { width: 320px; }
