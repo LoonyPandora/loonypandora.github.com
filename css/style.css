@@ -1,12 +1,21 @@
 /* Styles for everything
 ================================================== */
 
+
 body {
     color: #fff;
     font-family: "Comic Sans MS";
     background-image: -webkit-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 50%);
     background-image:    -moz-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 50%);
-    padding-bottom: 40px;
+    
+/*    background-image: -webkit-radial-gradient(50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),-webkit-radial-gradient(right top, #794aa2 0%, rgba(121,74,162,0) 57%);*/
+
+    background-color: #3b2f63;;
+}
+
+.container-fluid {
+    background-image: -webkit-radial-gradient(0% bottom, rgba(118,72,160,0.7) 0%, rgba(118,72,160,0) 60%),-webkit-radial-gradient(90% bottom, #523f8c 0%, rgba(82,63,140,0) 40%);
+        padding-bottom: 40px;
 }
 
 a {
@@ -37,6 +46,7 @@ h2 {
 }
 
 h1 {
+    color: #fff;
     width: 90%;
     margin: 0.4em auto 0.5em auto;
     text-align: center;
@@ -46,7 +56,6 @@ h1 {
     line-height: 0.8em;
     text-indent: -0.6em;
     color: #fff;
-
     text-rendering: optimizeLegibility;
     
 
@@ -95,3 +104,29 @@ ol li a {
     display: block;
     margin-left: 0.8em;
 }
+
+
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/* Wordclock Styles */
+.wordclock p {
+/*    font-size: 30px;*/
+    color: rgba(255,255,255,0.25);
+    line-height: 1.2em;
+    display: inline;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+
+.wordclock .current {
+    color: #fff;
+}
+

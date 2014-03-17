@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Analytics -->
@@ -42,6 +43,20 @@
             <span class="aitken">Aitken</span>
         </h1>
 
+        <ul>
+            <li>
+                <a href="https://github.com/LoonyPandora"><i class="fa fa-github"></i></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/LoonyPandora"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="http://www.last.fm/user/LoonyPandora"><i class="fa fa-music"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/loonypandora"><i class="fa fa-linkedin"></i></a>
+            </li>
+        </ul>
 
         <p class="strapline">I design &amp; code full-stack web stuff from my hideaway in East London.</p>
         <p class="strapline">Not a rockstar, guru, or ninja. No artisan hand-crafted pixels.</p>
@@ -53,25 +68,28 @@
                 <img src="avatar/vector.svg" width="200">
             </div>
             <div class="col-md-4">
-                <h2>GitHub Feed</h2>
+                <h2><i class="fa fa-github"></i> GitHub Feed</h2>
+                <ul class="followers"></ul>
+                <ol class="feed"></ol>
             </div>
             <div class="col-md-4">
-                <h2>Top Artists</h2>
+                <h2><i class="fa fa-music"></i> Now Listening</h2>
+                <ol class="recent-tracks"></ol>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-4">
-                <h2>GitHub Followers</h2>
-                <ol class="followers"></ol>
-            </div>
-            <div class="col-md-4">
-                <h2>GitHub Feed</h2>
-                <ol class="feed"></ol>
-            </div>
-            <div class="col-md-4">
                 <h2>Top Artists</h2>
                 <ol class="top-artists"></ol>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2>jQuery Wordclock</h2>
+                <div class="wordclock"></div>
             </div>
         </div>
     </div>
@@ -83,6 +101,18 @@
                 <span class="image-cropper"><img src="{{ img }}" /></span> {{ name }}
             </a>
         </li>
+    </script>
+
+
+
+
+    <script id="recent-tracks-template" type="text/template">
+    <li>
+        <a href="{{ url }}" title="{{ artist }} – {{ track }}. From the album '{{ album }}'. {{ date }}" class="truncate">
+            <span class="image-cropper"><img src="{{ img }}" /></span> {{ artist }} – {{ track }}
+        </a>
+    </li>
+        
     </script>
 
 
@@ -104,6 +134,8 @@
     <script src="js/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.noisy.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/mustache.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="http://loonypandora.co.uk/jQuery-WordClock/js/jquery.wordclock.js"></script>
 
 
     <script src="js/site.js" type="text/javascript" charset="utf-8"></script>
