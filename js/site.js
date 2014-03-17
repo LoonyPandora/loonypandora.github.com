@@ -2,15 +2,15 @@
 
 $(document).ready(function () {
 
-    // $("body").stellar();
+    $("body").stellar();
 
-    // $("body").noisy({
-    //     intensity: 1,
-    //     size: 200,
-    //     opacity: 0.1,
-    //     randomColors: false,
-    //     color: '#ffffff'
-    // });
+    $("body").noisy({
+        intensity: 0.01,
+        size: 200,
+        opacity: 0.8,
+        randomColors: false,
+        color: '#ffffff'
+    });
 
     getTopArtists();
     getFollowers();

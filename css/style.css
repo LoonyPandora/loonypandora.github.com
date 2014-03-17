@@ -4,8 +4,8 @@
 body {
     color: #fff;
     font-family: "Comic Sans MS";
-    background-image: -webkit-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 100%);
-    background-image:    -moz-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 50%);
+    background-image:    -moz-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 50%);
     padding-bottom: 40px;
 }
 
@@ -46,6 +46,9 @@ h1 {
     line-height: 0.8em;
     text-indent: -0.6em;
     color: #fff;
+
+    text-rendering: optimizeLegibility;
+    
 
     -webkit-transform: skew(-5deg,-10deg);
        -moz-transform: skew(-5deg,-10deg);
