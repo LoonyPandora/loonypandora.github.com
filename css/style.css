@@ -54,20 +54,20 @@ h1 {
 
 
 
-.top-artists {
+ol {
     list-style: none;
     padding: 0;
     margin: 0;
     height: 170px;
 }
 
-.top-artists li {
+ol li {
     padding: 0;
     margin: 5px 0;
     height: 30px;
 }
 
-.top-artists li a {
+ol li a {
     display: block;
     height: 30px;
     line-height: 30px;

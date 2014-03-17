@@ -48,12 +48,12 @@
 
         <div class="row">
             <div class="col-md-4">
-                <h2>Top Artists</h2>
-                <ol class="top-artists"></ol>
+                <h2>GitHub Followers</h2>
+                <ol class="followers"></ol>
             </div>
             <div class="col-md-4">
-                <h2>Top Artists</h2>
-                <ol class="top-artists"></ol>
+                <h2>GitHub Feed</h2>
+                <ol class="feed"></ol>
             </div>
             <div class="col-md-4">
                 <h2>Top Artists</h2>
@@ -70,6 +70,21 @@
             </a>
         </li>
     </script>
+
+
+    <script id="followers-template" type="text/template">
+        <li>{{ follower_count }} Followers</li>
+    </script>
+
+    <script id="repos-template" type="text/template">
+        <li>{{ repo_count }} Repos</li>
+    </script>
+
+    <script id="feed-template" type="text/template">
+        <li><a href="{{ repo.url }}">{{ type }} - {{ repo.name }}</a></li>
+    </script>
+
+
 
     <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>

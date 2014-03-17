@@ -13,7 +13,9 @@ $(document).ready(function () {
     // });
 
     getTopArtists();
-
+    getFollowers();
+    getRepos();
+    getFeed();
 });
 
 
@@ -37,28 +39,22 @@ function getTopArtists () {
     request.done(function (response) {
         var $template = $("#top-artists-template").html();
 
-        $.each(response.topartists.artist,
-            function (i, artist) {
-        
-                var renderData = {
-                    url: artist.url,
-                    name: artist.name,
-                    img: artist.image[1]["#text"]
-                };
-        
-                $(".top-artists").append(
-                    Mustache.render($template, renderData)
-                );
-            }
-        );
+        $.each(response.topartists.artist, function (i, artist) {
+            var renderData = {
+                url: artist.url,
+                name: artist.name,
+                img: artist.image[1]["#text"]
+            };
 
-        $(".top-artists").addClass("animated fadeIn");
+            $(".top-artists").append(
+                Mustache.render($template, renderData)
+            );
+        });
+
+        $(".top-artists").addClass("animated fadeInDown");
     });
-    
-    
-    
-    
-    
+
+
     request.fail(function () {
         
     });
@@ -68,7 +64,97 @@ function getTopArtists () {
 
 
 
+function getFollowers () {
+    var request = $.ajax({
+        dataType: "json",
+        url: "https://api.github.com/users/LoonyPandora/followers",
+        type: "GET"
+    });
+    
+    
+    request.done(function (response) {
+        var $template = $("#followers-template").html();
+
+        var renderData = {
+            follower_count: response.length
+        };
+
+        $(".followers").append(
+            Mustache.render($template, renderData)
+        ).addClass("animated fadeInDown");;
+    })
+
+    request.fail(function () {
+        console.log(arguments);
+    })
+}
+
+
+
 function getRepos () {
-    // https://api.github.com/users/LoonyPandora/followers
+    var request = $.ajax({
+        dataType: "json",
+        url: "https://api.github.com/users/LoonyPandora/repos",
+        type: "GET"
+    });
+    
+    
+    request.done(function (response) {
+        var $template = $("#repos-template").html();
+
+        var renderData = {
+            repo_count: response.length
+        };
+
+        $(".followers").append(
+            Mustache.render($template, renderData)
+        ).addClass("animated fadeInDown");
+    })
+    
+
+    request.fail(function () {
+        console.log(arguments);
+    })
+}
+
+
+
+function getFeed () {
+    var request = $.ajax({
+        dataType: "jsonp",
+        url: "https://github.com/LoonyPandora.json",
+        type: "GET"
+    });
+
+
+    request.done(function (response) {
+        var $template = $("#feed-template").html();
+
+        $.each(response, function (i, event) {
+            if (i === 5) {
+                return false;
+            }
+            // console.log(i);
+            var renderData = {
+                created_at: event.created_at,
+                type: event.type,
+                repo: {
+                    url: event.repository.url,
+                    name: event.repository.name
+                }
+            };
+
+            $(".feed").append(
+                Mustache.render($template, renderData)
+            );
+        });
+
+        $(".feed").addClass("animated fadeInDown");
+    })
+    
+
+    request.fail(function () {
+        console.log(arguments);
+    })
 }
 
