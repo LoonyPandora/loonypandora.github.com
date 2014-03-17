@@ -15,7 +15,8 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Analytics -->
@@ -31,65 +32,53 @@
         })();
     </script>
 </head>
-<body>
 
-    <div class="container clearfix">
-        <div class="block daftcow">
-            <h1>James Aitken</h1>
-            <img src="img/daftcow.png" alt="Daft Cow?">
+<body data-stellar-background-ratio="0.5">
+
+    <div class="container-fluid">
+
+        <h1 class="nametag">
+            <span class="james">James</span>
+            <span class="aitken">Aitken</span>
+        </h1>
+
+        <p class="strapline">I design &amp; code full-stack web stuff from my hideout in East London.</p>
+        <p class="strapline">Not a rockstar, guru, or ninja. No artisan hand-crafted pixels.</p>
+        <p class="strapline">Just good work without fuss.</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Top Artists</h2>
+                <ol class="top-artists"></ol>
+            </div>
+            <div class="col-md-4">
+                <h2>Top Artists</h2>
+                <ol class="top-artists"></ol>
+            </div>
+            <div class="col-md-4">
+                <h2>Top Artists</h2>
+                <ol class="top-artists"></ol>
+            </div>
         </div>
-
-        <div class="block">
-            <h2>Who is <br> this guy?</h2>
-            <p>Not a rockstar, guru, or ninja. <br> Just a guy who does good work without buzzwords.</p>
-            <p>I design &amp; code web stuff from my super-secret hideout in London.</p>
-        </div>
-
-        <div class="block">
-            <h2>Get in touch <br> See my work</h2>
-            <p>All my work is available on GitHub, my music habits are on last.fm, and I sometimes say interesting things on twitter.</p>
-
-            <ul class="contact">
-                <li>
-                    <a href="https://github.com/LoonyPandora">
-                        <img src="img/octocat.png" alt="GitHub Octocat">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/LoonyPandora">
-                        <img src="img/twitter.png" alt="Twitter Bird">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.last.fm/user/LoonyPandora">
-                        <img src="img/lastfm.png" alt="Last.fm Logo">
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Perl<br>Dancer</h2>
-            <p>I am contributor and plugin author on the Perl micro-framework <a href="http://perldancer.org">Dancer</a>.</p>
-
-            <p>All my Dancer plugins and other Perl modules are on the <a href="https://metacpan.org/author/JAITKEN">CPAN</a> &amp; <a href="https://github.com/LoonyPandora">GitHub</a>.</p>
-        </div>
-
-        <div class="block">
-            <h2>jQuery<br>WordClock</h2>
-            <p>A jQuery plugin that makes clocks using words instead of numbers or analog hands.</p>
-            <p>Check out the <a href="http://loonypandora.co.uk/jQuery-WordClock/">demo</a>, or <a href="https://github.com/LoonyPandora/jQuery-WordClock">fork it on GitHub</a>.</p>
-        </div>
-
-        <div class="block">
-            <h2>Talks and<br>Presentations</h2>
-            <p>I give talks and presentations at conferences about all sorts of interesting things.</p>
-            <p>If you can't make it to one in person, have a look at <a href="https://speakerdeck.com/loonypandora">my speakderdeck</a>.</p>
-        </div>
-
     </div>
 
+    <!-- Mustache Templates -->
+    <script id="top-artists-template" type="text/template">
+        <li>
+            <a href="{{ url }}">
+                <span class="image-cropper"><img src="{{ img }}" /></span> {{ name }}
+            </a>
+        </li>
+    </script>
 
+    <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.noisy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/mustache.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script src="js/site.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
+
 </html>
