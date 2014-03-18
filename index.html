@@ -36,7 +36,7 @@
 
 <body data-stellar-background-ratio="0.25">
 
-    <div class="container-fluid">
+    <div class="container">
 
         <h1 class="nametag">
             <span class="james">James</span>
@@ -64,13 +64,13 @@
 
         <div class="row">
             <div class="col-md-4">
-                <h2>Daft Cow?</h2>
-                <img src="avatar/vector.svg" width="200">
-            </div>
-            <div class="col-md-4">
                 <h2><i class="fa fa-github"></i> GitHub Feed</h2>
                 <ul class="followers"></ul>
                 <ol class="feed"></ol>
+            </div>
+            <div class="col-md-4">
+                <h2>Top Artists</h2>
+                <ol class="top-artists"></ol>
             </div>
             <div class="col-md-4">
                 <h2><i class="fa fa-music"></i> Now Listening</h2>
@@ -80,16 +80,27 @@
 
         <div class="row">
             <div class="col-md-4">
-                <h2>Top Artists</h2>
-                <ol class="top-artists"></ol>
+                <h2>MetaCPAN</h2>
+                <ul class="metacpan"></ul>
             </div>
+
+            <div class="col-md-4">
+                <h2>CoderWall</h2>
+                <ul class="coderwall"></ul>
+            </div>
+
         </div>
 
-
         <div class="row">
-            <div class="col-md-8">
-                <h2>jQuery Wordclock</h2>
-                <div class="wordclock"></div>
+            <div class="col-md-4">
+                <h2>Daft Cow?</h2>
+                <img src="avatar/vector.svg" width="200">
+            </div>
+
+            <div class="col-md-4">
+                    <h2>jQuery Wordclock</h2>
+                    <div class="wordclock"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -97,24 +108,25 @@
     <!-- Mustache Templates -->
     <script id="top-artists-template" type="text/template">
         <li>
-            <a href="{{ url }}">
+            <a href="{{ url }}"  class="truncate">
                 <span class="image-cropper"><img src="{{ img }}" /></span> {{ name }}
             </a>
         </li>
     </script>
 
-
-
-
     <script id="recent-tracks-template" type="text/template">
-    <li>
-        <a href="{{ url }}" title="{{ artist }} – {{ track }}. From the album '{{ album }}'. {{ date }}" class="truncate">
-            <span class="image-cropper"><img src="{{ img }}" /></span> {{ artist }} – {{ track }}
-        </a>
-    </li>
-        
+        <li>
+            <a href="{{ url }}" title="{{ artist }} – {{ track }}. From the album '{{ album }}'. {{ date }}" class="truncate">
+                <span class="image-cropper"><img src="{{ img }}" /></span> {{ artist }} – {{ track }}
+            </a>
+        </li>
     </script>
 
+    <script id="coderwall-template" type="text/template">
+        <li>
+            <img src="{{ badge }}" title="{{ name }} - {{ description }}" alt="{{ name }} - {{ description }}">
+        </li>
+    </script>
 
     <script id="followers-template" type="text/template">
         <li>{{ follower_count }} Followers</li>
@@ -125,8 +137,13 @@
     </script>
 
     <script id="feed-template" type="text/template">
-        <li><a href="{{ repo.url }}">{{ type }} - {{ repo.name }}</a></li>
+        <li><a href="{{ repo.url }}" class="truncate">{{ type }} - {{ repo.name }}</a></li>
     </script>
+    
+    <script id="metacpan-template" type="text/template">
+        <li>{{ version }} - {{ dist }}</li>
+    </script>
+    
 
 
 

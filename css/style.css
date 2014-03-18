@@ -34,8 +34,6 @@ a:hover {
     text-align: center;
     margin-bottom: 0.5em;
     font-size: 28px;
-    font-family: "Comic Sans MS";
-    font-weight: 300;
 }
 
 
@@ -57,7 +55,6 @@ h1 {
     text-indent: -0.6em;
     color: #fff;
     text-rendering: optimizeLegibility;
-    
 
     -webkit-transform: skew(-5deg,-10deg);
        -moz-transform: skew(-5deg,-10deg);
@@ -117,7 +114,6 @@ ol li a {
 
 /* Wordclock Styles */
 .wordclock p {
-/*    font-size: 30px;*/
     color: rgba(255,255,255,0.25);
     line-height: 1.2em;
     display: inline;
@@ -129,4 +125,27 @@ ol li a {
 .wordclock .current {
     color: #fff;
 }
+
+
+
+/* Coderwall Styles */
+.coderwall {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coderwall li {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+}
+
+.coderwall img {
+    max-width: 75px;
+    opacity: 0.9;
+}
+
+
+
 

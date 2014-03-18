@@ -12,12 +12,16 @@ $(document).ready(function () {
         color: '#ffffff'
     });
 
-    getTopArtists();
-    getRecentTracks();
-    getFollowers();
-    getRepos();
-    getFeed();
-    startWordClock();
+    // getTopArtists();
+    // getRecentTracks();
+    // getFollowers();
+    // getRepos();
+    // getFeed();
+
+    // getCoderWall();
+    metaCPAN();
+
+    // startWordClock();
 });
 
 
@@ -213,6 +217,109 @@ function getFeed () {
     request.fail(function () {
         console.log(arguments);
     })
+}
+
+
+function getCoderWall () {
+    var request = $.ajax({
+        dataType: "jsonp",
+        url: "https://coderwall.com/LoonyPandora.json",
+        type: "GET"
+    });
+
+
+    request.done(function (response) {
+        var $template = $("#coderwall-template").html();
+    
+        $.each(response.data.badges, function (i, badge) {
+            var renderData = {
+                badge: badge.badge,
+                description: badge.description,
+                name: badge.name
+            };
+    
+            $(".coderwall").append(
+                Mustache.render($template, renderData)
+            );
+        });
+    
+        $(".coderwall").addClass("animated fadeInDown");
+    })
+    
+
+    request.fail(function () {
+        console.log(arguments);
+    })
+}
+
+
+function metaCPAN () {
+    // MetaCPAN API falls on the "give loads of felxibility" side of the API
+    // Makes it hard to use and totally non-discoverable.
+    // This is the only way to get a list of all releases by an author...
+    var searchQuery = {
+       "size": 5,
+       "fields": [
+           "distribution",
+           "provides",
+           "version"
+       ],
+       "query": {
+           "filtered": {
+               "filter": {
+                   "and": [{
+                       "term": {
+                           "release.status": "latest"
+                       }
+                   }, {
+                       "term": {
+                           "release.author": "JAITKEN"
+                       }
+                   }]
+               },
+               "query": {
+                   "match_all": {}
+               }
+           }
+       },
+       "sort": {
+           "release.date": "desc"
+       }
+    };
+
+    var request = $.ajax({
+        url: "http://api.metacpan.org/v0/release/_search",
+        type: "POST",
+        data: JSON.stringify(searchQuery),
+        processData: false
+    });
+    
+
+    request.done(function (response) {
+    
+        console.log(response);
+    
+        var $template = $("#metacpan-template").html();
+    
+        $.each(response.hits.hits, function (i, module) {
+            var renderData = {
+                version: module.fields.version,
+                name: module.fields.provides,
+                dist: module.fields.distribution,
+            };
+    
+            $(".metacpan").append(
+                Mustache.render($template, renderData)
+            );
+        });
+    
+        $(".metacpan").addClass("animated fadeInDown");
+    });
+    
+    request.fail(function () {
+        console.log(arguments);
+    })
+
 }
 
 
