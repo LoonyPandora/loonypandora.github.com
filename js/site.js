@@ -2,26 +2,17 @@
 
 $(document).ready(function () {
 
-    $("body").stellar();
-
-    $("body").noisy({
-        intensity: 0.01,
-        size: 200,
-        opacity: 0.8,
-        randomColors: false,
-        color: '#ffffff'
+    skrollr.init({
+        forceHeight: false
     });
 
     // getTopArtists();
-    // getRecentTracks();
+    getRecentTracks(6);
     // getFollowers();
     // getRepos();
     // getFeed();
 
-    // getCoderWall();
     metaCPAN();
-
-    // startWordClock();
 });
 
 
@@ -70,13 +61,13 @@ function getTopArtists () {
 
 
 
-function getRecentTracks () {
+function getRecentTracks (limit) {
     var recentTracksURL = "http://ws.audioscrobbler.com" +
                           "/2.0" + 
                           "/?method=user.getrecenttracks" + 
                           "&user=LoonyPandora" + 
                           "&format=json" + 
-                          "&limit=5" + 
+                          "&limit=" + limit + 
                           "&api_key=c1e48cba96f019d566438bd5e7f1591f";
 
     var request = $.ajax({
@@ -220,39 +211,6 @@ function getFeed () {
 }
 
 
-function getCoderWall () {
-    var request = $.ajax({
-        dataType: "jsonp",
-        url: "https://coderwall.com/LoonyPandora.json",
-        type: "GET"
-    });
-
-
-    request.done(function (response) {
-        var $template = $("#coderwall-template").html();
-    
-        $.each(response.data.badges, function (i, badge) {
-            var renderData = {
-                badge: badge.badge,
-                description: badge.description,
-                name: badge.name
-            };
-    
-            $(".coderwall").append(
-                Mustache.render($template, renderData)
-            );
-        });
-    
-        $(".coderwall").addClass("animated fadeInDown");
-    })
-    
-
-    request.fail(function () {
-        console.log(arguments);
-    })
-}
-
-
 function metaCPAN () {
     // MetaCPAN API falls on the "give loads of felxibility" side of the API
     // Makes it hard to use and totally non-discoverable.
@@ -293,7 +251,7 @@ function metaCPAN () {
         data: JSON.stringify(searchQuery),
         processData: false
     });
-    
+
 
     request.done(function (response) {
     
@@ -308,12 +266,12 @@ function metaCPAN () {
                 dist: module.fields.distribution,
             };
     
-            $(".metacpan").append(
+            $(".metacpan-activity").append(
                 Mustache.render($template, renderData)
             );
         });
     
-        $(".metacpan").addClass("animated fadeInDown");
+        $(".metacpan-activity").addClass("animated fadeInDown");
     });
     
     request.fail(function () {
@@ -322,12 +280,3 @@ function metaCPAN () {
 
 }
 
-
-
-
-function startWordClock () {
-    $(".wordclock").wordclock({
-        quanta : ["hours", "minutes", "seconds"]
-    });
-    
-}

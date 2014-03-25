@@ -2,24 +2,50 @@
 ================================================== */
 
 
+
+
+
+
+
+
+
 body {
     color: #fff;
-    font-family: "Comic Sans MS";
-    background-image: -webkit-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 50%);
-    background-image:    -moz-linear-gradient(-90deg, rgb(49, 150, 229) 0%, rgb(147, 92, 198) 50%);
+    font-family: "Helvetica Neue";
     
-/*    background-image: -webkit-radial-gradient(50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),-webkit-radial-gradient(right top, #794aa2 0%, rgba(121,74,162,0) 57%);*/
+    /* Option 1 */
+    background-image: -webkit-radial-gradient(50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),
+                      -webkit-radial-gradient(right top, #794aa2 0%, rgba(121,74,162,0) 50%),
+                      -webkit-radial-gradient(0% bottom, rgba(118,72,160,0.7) 0%, rgba(118,72,160,0) 60%),
+                      -webkit-radial-gradient(90% bottom, #523f8c 0%, rgba(82,63,140,0) 40%);
+    background-color: #3b2f63;
 
-    background-color: #3b2f63;;
+
+
+    /* Option 2
+    background-image: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),
+                      -moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%),
+                      -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background-image: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), 
+                      -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%),
+                      -webkit-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background-image: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),
+                      -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%),
+                      -o-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background-image: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),
+                      -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%),
+                      -ms-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+    background-image: radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),
+                      linear-gradient(to bottom, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%),
+                      linear-gradient(135deg, #670d10 0%,#092756 100%);
+    background-color: #092756;
+    */
+
 }
 
-.container-fluid {
-    background-image: -webkit-radial-gradient(0% bottom, rgba(118,72,160,0.7) 0%, rgba(118,72,160,0) 60%),-webkit-radial-gradient(90% bottom, #523f8c 0%, rgba(82,63,140,0) 40%);
-        padding-bottom: 40px;
-}
 
 a {
-    font-weight: bold;
+    font-weight: normal;
     color: #fff;
     text-decoration: none;
 }
@@ -28,25 +54,70 @@ a:hover {
     color: #ddd;
 }
 
+
+/* TODO Work out heights so we don't get ugly content cut-off */
+section {
+        outline: 1px solid white;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 20px 0 20px;
+}
+
+@media (min-width: 768px) { 
+    section {
+        height: 0;
+        width: 50%;
+        padding-bottom: 50%;
+    }
+}
+
+@media (min-width: 992px) { 
+    section {
+        height: 0;
+        width: 33%;
+        padding-bottom: 33%;
+    }
+}
+
+@media (min-width: 1200px) { 
+    section {
+        height: 0;
+        width: 33%;
+        padding-bottom: 33%;
+    }
+}
+
+
+
 .strapline {
     display: block;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 0.5em;
     font-size: 28px;
+    font-weight: 100;
 }
 
 
 h2 {
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-    line-height: 1.5em;
-    margin-bottom: 10px;
+/*    outline: 1px solid red;*/
+/*    border-bottom: 1px solid rgba(255,255,255,0.5);*/
+    line-height: 2em;
+    margin: 0;
+    font-weight: 300;
+/*    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);*/
 }
+
+
+
+
+
 
 h1 {
     color: #fff;
     width: 90%;
-    margin: 0.4em auto 0.5em auto;
+    margin: 0 auto;
     text-align: center;
     font-weight: normal;
     font-size: 144px;
@@ -63,35 +134,37 @@ h1 {
 
 
 
-ol {
+.recent-tracks, .metacpan-activity {
     list-style: none;
     padding: 0;
     margin: 0;
-    height: 170px;
+/*    height: 170px;*/
 }
 
-ol li {
+.recent-tracks li, .metacpan-activity li {
     padding: 0;
-    margin: 5px 0;
-    height: 30px;
+    margin: 0 0 10px 0;
+    height: 40px;
 }
 
-ol li a {
+.recent-tracks li a, .metacpan-activity li a {
     display: block;
-    height: 30px;
-    line-height: 30px;
-    vertical-align: middle;
+    height: 40px;
+    margin: 0;
 }
 
 
-
-.image-cropper {
-    height: 30px;
-    width: 30px;
-    vertical-align: top;
+.recent-tracks .track-image {
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
     display: inline-block;
     overflow: hidden;
+    float: left;
+    margin-right: 10px;
 }
+
+
 
 .james {
     display: block;
@@ -112,40 +185,67 @@ ol li a {
 
 
 
-/* Wordclock Styles */
-.wordclock p {
-    color: rgba(255,255,255,0.25);
-    line-height: 1.2em;
-    display: inline;
-    letter-spacing: -1px;
-    font-weight: bold;
+
+
+/* Skrollr default things */
+header {
+    position: relative;
+/*    outline: 1px solid red;*/
+    margin: 80px 0 80px 0;
+}
+
+.nametag {
+    margin: 0 auto 40px auto;
+    opacity: 1;
 }
 
 
-.wordclock .current {
-    color: #fff;
+/* Main content */
+.main-content {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 60px;
 }
 
 
 
-/* Coderwall Styles */
-.coderwall {
+/* MetaCPAN */
+
+
+
+
+
+
+/* Navigation */
+nav {
+    margin-bottom: 40px;
+}
+nav, nav ul {
+    height: 40px;
+/*    outline: 1px solid red;*/
+}
+
+nav ul {
+    width: 250px;
+/*    display: block;*/
+/*    outline: 1px solid red;*/
     list-style: none;
+    margin: 0 auto;
     padding: 0;
-    margin: 0;
 }
 
-.coderwall li {
-    display: inline-block;
-    margin: 0;
-    padding: 5px;
+nav ul li {
+    float: left;
+    margin: 0 5px;
 }
 
-.coderwall img {
-    max-width: 75px;
-    opacity: 0.9;
+nav ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 32px;
+/*    outline: 1px solid red;*/
+    text-align: center;
 }
-
-
 
 
