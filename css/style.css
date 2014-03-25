@@ -2,10 +2,39 @@
 ================================================== */
 
 
+img {
+    max-width: 100%;
+}
 
 
 
+.daft-cow {
+/*    outline: 1px solid white;*/
+/*    background-image: url("/avatar/vector.svg");*/
+/*    background-size: 250px;*/
+/*    background-position: center center;*/
+/*    background-repeat: no-repeat;*/
+/*    min-height: 250px;*/
+}
 
+
+.daft-cow h2:before {
+    content: "\f078";
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    color: rgba(255,255,255,0.2);
+    position: absolute;
+    top: 1.5em;
+    left: 40px;
+}
+
+.daft-cow img {
+/*    outline: 1px solid red;*/
+    max-width: 250px;
+
+    margin: 0 auto;
+    display: block;
+}
 
 
 
@@ -19,7 +48,6 @@ body {
                       -webkit-radial-gradient(0% bottom, rgba(118,72,160,0.7) 0%, rgba(118,72,160,0) 60%),
                       -webkit-radial-gradient(90% bottom, #523f8c 0%, rgba(82,63,140,0) 40%);
     background-color: #3b2f63;
-
 
 
     /* Option 2
@@ -55,36 +83,53 @@ a:hover {
 }
 
 
-/* TODO Work out heights so we don't get ugly content cut-off */
+.container {
+    padding: 0;
+}
+
 section {
-        outline: 1px solid white;
+/*    outline: 1px solid white;*/
     float: left;
-    width: 100%;
     overflow: hidden;
-    padding: 20px 20px 0 20px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
 }
 
 @media (min-width: 768px) { 
+    .container {
+        padding: 0 15px;
+    }
+
     section {
-        height: 0;
-        width: 50%;
-        padding-bottom: 50%;
+        height: 360px;
+        width:  360px;
+        padding: 5px 20px 0 20px;
     }
 }
 
 @media (min-width: 992px) { 
+    .container {
+        padding: 0 15px;
+    }
+
     section {
-        height: 0;
-        width: 33%;
-        padding-bottom: 33%;
+        height: 313px;
+        width:  313px;
+        padding: 5px 20px 0 20px;
     }
 }
 
 @media (min-width: 1200px) { 
+    .container {
+        width: 1125px;
+        padding: 0 15px;
+    }
+
     section {
-        height: 0;
-        width: 33%;
-        padding-bottom: 33%;
+        height: 365px;
+        width:  365px;
+        padding: 5px 20px 0 20px;
     }
 }
 
@@ -97,6 +142,7 @@ section {
     margin-bottom: 0.5em;
     font-size: 28px;
     font-weight: 100;
+    padding: 0 15px;
 }
 
 
@@ -105,7 +151,7 @@ h2 {
 /*    border-bottom: 1px solid rgba(255,255,255,0.5);*/
     line-height: 2em;
     margin: 0;
-    font-weight: 300;
+    font-weight: 100;
 /*    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);*/
 }
 
@@ -138,7 +184,6 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
-/*    height: 170px;*/
 }
 
 .recent-tracks li, .metacpan-activity li {

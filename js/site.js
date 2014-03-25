@@ -12,7 +12,7 @@ $(document).ready(function () {
     // getRepos();
     // getFeed();
 
-    metaCPAN();
+    metaCPAN(6);
 });
 
 
@@ -211,12 +211,12 @@ function getFeed () {
 }
 
 
-function metaCPAN () {
+function metaCPAN (limit) {
     // MetaCPAN API falls on the "give loads of felxibility" side of the API
     // Makes it hard to use and totally non-discoverable.
     // This is the only way to get a list of all releases by an author...
     var searchQuery = {
-       "size": 5,
+       "size": limit,
        "fields": [
            "distribution",
            "provides",
