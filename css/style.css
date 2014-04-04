@@ -49,7 +49,11 @@ body {
                       -webkit-radial-gradient(90% bottom, #523f8c 0%, rgba(82,63,140,0) 40%);
     background-color: #3b2f63;
 
+    
+    /* Option 3 */
 
+/*    background-image: radial-gradient(circle farthest-side at 100% 100%, rgb(254, 253, 254) 5%, rgb(248, 205, 218) 25%, rgb(29, 43, 100) 80%, rgb(14, 21, 58) 98%);*/
+    
     /* Option 2
     background-image: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),
                       -moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%),
