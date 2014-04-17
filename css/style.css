@@ -48,7 +48,8 @@ body {
                       -webkit-radial-gradient(0% bottom, rgba(118,72,160,0.7) 0%, rgba(118,72,160,0) 60%),
                       -webkit-radial-gradient(90% bottom, #523f8c 0%, rgba(82,63,140,0) 40%);
     background-color: #3b2f63;
-
+    
+/*    background-image: url("/img/background.jpg");*/
     
     /* Option 3 */
 
