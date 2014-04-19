@@ -169,7 +169,7 @@ section {
 
 
 
-.daft-cow img {
+.daft-cow {
     max-width: 150px;
     margin: 0 auto;
     display: block;
@@ -177,10 +177,6 @@ section {
     border: 2px solid white;
     background-color: rgba(255,255,255,0.1);
     border-radius: 125px;
-}
-
-.who-am-i {
-    width: 720px;
 }
 
 
@@ -236,17 +232,12 @@ nav ul li a {
 
     section {
         height: 360px;
-        width:  360px;
         padding: 5px 20px 0 20px;
     }
 
-    .who-am-i {
-        width: 720px;
-    }
-
-    hr {
-        width: 680px;
-    }
+    hr { width: 680px; }
+    .col-1 { width: 360px; }
+    .col-2 { width: 720px; }
 }
 
 @media (min-width: 992px) { 
@@ -256,17 +247,12 @@ nav ul li a {
 
     section {
         height: 313px;
-        width:  313px;
         padding: 5px 20px 0 20px;
     }
 
-    .who-am-i {
-        width: 626px;
-    }
-
-    hr {
-        width: 899px;
-    }
+    hr { width: 899px; }
+    .col-1 { width: 313px; }
+    .col-2 { width: 626px; }
 }
 
 @media (min-width: 1200px) { 
@@ -277,18 +263,12 @@ nav ul li a {
 
     section {
         height: 365px;
-        width:  365px;
         padding: 5px 20px 0 20px;
     }
 
-    .who-am-i {
-        width: 730px;
-    }
-
-    hr {
-        width: 1055px;
-    }
-
+    hr { width: 1055px; }
+    .col-1 { width: 365px; }
+    .col-2 { width: 730px; }
 }
 
 
