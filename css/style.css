@@ -18,29 +18,23 @@ img {
 }
 
 
-.daft-cow h2:before {
-    content: "\f078";
-    font-family: 'FontAwesome';
-    font-weight: normal;
-    color: rgba(255,255,255,0.2);
-    position: absolute;
-    top: 1.5em;
-    left: 40px;
-}
-
 .daft-cow img {
 /*    outline: 1px solid red;*/
     max-width: 250px;
 
     margin: 0 auto;
     display: block;
+    padding: 25px;
+    border: 2px solid white;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 125px;
 }
 
 
 
 body {
     color: #fff;
-    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     
     /* Option 1 */
 /*    background-image: -webkit-radial-gradient(50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),*/
@@ -149,8 +143,8 @@ section {
     text-align: center;
     margin-bottom: 0.5em;
     font-size: 28px;
-    font-family: "Roboto";
-    font-weight: 100;
+    font-family: "HelveticaNeue-Thin";
+/*    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);*/
     padding: 0 15px;
 }
 
@@ -160,9 +154,8 @@ h2 {
 /*    border-bottom: 1px solid rgba(255,255,255,0.5);*/
     line-height: 2em;
     margin: 0;
-    font-family: "Roboto";
-    font-weight: 100;
-/*    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);*/
+    font-family: "HelveticaNeue-Thin";
+/*    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);*/
 }
 
 
