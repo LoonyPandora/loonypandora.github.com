@@ -7,7 +7,7 @@ $(document).ready(function () {
     });
 
     $("body").noisy({
-        intensity:  0.01, 
+        intensity:  0.005, 
         size:       500, 
         opacity:    0.4, 
         fallback:   "", 
