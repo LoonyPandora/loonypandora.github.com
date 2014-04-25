@@ -8,10 +8,10 @@ img {
 
 body {
     color: #ccc;
-    text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px;
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     background-image: radial-gradient(circle farthest-side at 100% 100%, rgb(29, 43, 100) 80%, rgb(14, 21, 58) 100%);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5em;
 }
 
@@ -35,12 +35,13 @@ a:hover {
 
 .strapline {
     display: block;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    margin-bottom: 0.5em;
-    font-size: 28px;
-    font-family: "HelveticaNeue-Thin";
-    padding: 0 15px;
+    font-size: 36px;
+    line-height: 1.5em;
+    font-weight: normal;
+/*    font-family: "HelveticaNeue-Thin";*/
 }
 
 
@@ -49,7 +50,9 @@ h2 {
 /*    border-bottom: 1px solid rgba(255,255,255,0.5);*/
     line-height: 2em;
     margin: 0;
-    font-family: "HelveticaNeue-Thin";
+    font-size: 36px;
+    font-weight: normal;
+/*    font-family: "HelveticaNeue-Thin";*/
 }
 
 
@@ -64,14 +67,14 @@ h1 {
     margin: 0 auto;
     text-align: center;
     font-weight: normal;
-    font-size: 144px;
+    font-size: 160px;
     letter-spacing: -8px;
     line-height: 0.8em;
     text-indent: -0.6em;
     color: #fff;
     text-rendering: optimizeLegibility;
 
-    margin: 0 auto 40px auto;
+    margin: 0 auto 80px auto;
     opacity: 1;
 
     -webkit-transform: skew(-5deg,-10deg);

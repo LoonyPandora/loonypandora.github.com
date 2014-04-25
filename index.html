@@ -34,17 +34,16 @@
     </script>
 </head>
 
-<!-- <body data-0="background-position:0px 0px;" data-1200="background-position:0px -100px;"> -->
-<body>
-    <div class="container">
+<body data-0="background-position: 0px 0px;" data-1200="background-position:0px 300px;">
 
-        <header data-0="top: 0px; opacity: 1;" data-600="top: 80px; opacity: 0;">
+    <div class="container">
+        <header>
             <h1>
                 <span class="james">James</span>
                 <span class="aitken">Aitken</span>
             </h1>
-            
-            <p class="strapline">Not a rockstar, guru, or ninja. Free from artisan hand&#8209;crafted pixels.</p>
+        
+            <p class="strapline">Not a rockstar, guru, or ninja.<br>Free from artisan hand&#8209;crafted additives.</p>
         </header>
 
         <hr>
@@ -55,20 +54,15 @@
 
                 <p>I design &amp; code full&#8209;stack web stuff from my hideaway in East London.</p>
 
-                <p>A full-stack developer is someone who confidently performs every task involved in getting a website online.</p>
-                
-                <p>I do UI mockups, graphic design, building HTML, CSS, &amp; JavaScript, server-side components, and unix system administration.</p>
+                <p>All my open source work is available on GitHub, so please check it out if you are interested in seeing what a full&#8209;stack developer does.</p>
 
-                <p>My language of choice is JavaScript most of the time, but am equally comfortable with Perl or Ruby.</p>
-
-                <p>I speak at conferences, and am currently open for speaking invitations</p>
+                <p>I am currently open for conference speaking invitations.</p>
             </section>
 
             <section class="col-1">
                 <h2>Hello There!</h2>
                 <img src="avatar/vector.svg" class="daft-cow">
 
-                <h2>Elsewhere</h2>
                 <nav role="navigation">
                     <ul>
                         <li>
@@ -107,7 +101,7 @@
             </section>
 
             <section class="col-1">
-                <h2>Premier League Table</h2>
+                <h2>League Table</h2>
                 <p><a href="http://loonypandora.co.uk/league-table/">Animated season league table</a></p>
             </section>
 
@@ -116,7 +110,6 @@
                 <p><a href="http://loonypandora.co.uk/league-table/">Big Deploy Button</a></p>
             </section>
         </div>
-
     </div>
 
     <!-- Mustache Templates -->
@@ -128,33 +121,11 @@
         </li>
     </script>
 
-    <script id="followers-template" type="text/template">
-        <li>{{ follower_count }} Followers</li>
-    </script>
-
-    <script id="repos-template" type="text/template">
-        <li>{{ repo_count }} Repos</li>
-    </script>
-
-    <script id="feed-template" type="text/template">
-        <li><a href="{{ repo.url }}" class="truncate">{{ type }} - {{ repo.name }}</a></li>
-    </script>
-    
-    <script id="metacpan-template" type="text/template">
-        <li>
-            <a href="https://metacpan.org/release/JAITKEN/{{ dist }}-{{ version }}" class="truncate">{{ dist }} <br> version {{ version }}</a>
-        </li>
-    </script>
-
-
-
     <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/skrollr.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/mustache.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.noisy.js" type="text/javascript" charset="utf-8"></script>
-
     <script src="js/site.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
-
 </html>
