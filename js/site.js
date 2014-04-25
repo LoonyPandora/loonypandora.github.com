@@ -9,7 +9,7 @@ $(document).ready(function () {
     $("body").noisy({
         intensity:  0.005, 
         size:       500, 
-        opacity:    0.4, 
+        opacity:    0.3, 
         fallback:   "", 
         monochrome: true
     });
