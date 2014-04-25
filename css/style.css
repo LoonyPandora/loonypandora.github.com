@@ -7,9 +7,11 @@ img {
 }
 
 body {
-    color: #ccc;
-    text-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px;
+    color: #ddd;
+    text-shadow: rgba(0, 0, 0, 0.1) 0 2px 0;
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 200;
     background-image: radial-gradient(circle farthest-side at 100% 100%, rgb(29, 43, 100) 80%, rgb(14, 21, 58) 100%);
     font-size: 18px;
     line-height: 1.5em;
@@ -40,8 +42,7 @@ a:hover {
     text-align: center;
     font-size: 36px;
     line-height: 1.5em;
-    font-weight: normal;
-/*    font-family: "HelveticaNeue-Thin";*/
+    font-weight: 200;
 }
 
 
@@ -51,8 +52,7 @@ h2 {
     line-height: 2em;
     margin: 0;
     font-size: 36px;
-    font-weight: normal;
-/*    font-family: "HelveticaNeue-Thin";*/
+    font-weight: 200;
 }
 
 
