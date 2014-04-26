@@ -1,20 +1,20 @@
 "use strict";
 
 $(document).ready(function () {
-
     skrollr.init({
         forceHeight: false
     });
 
-    $("body").noisy({
+    $(".starfield").noisy({
         intensity:  0.005, 
         size:       500, 
-        opacity:    0.3, 
+        opacity:    0.4, 
         fallback:   "", 
-        monochrome: true
+        monochrome: true,
+        disableCache: true
     });
 
-    getRecentTracks(6);
+    getRecentTracks(16);
 });
 
 
@@ -52,7 +52,7 @@ function getRecentTracks (limit) {
                 track: track.name,
                 album: track.album["#text"],
                 date: date,
-                img: track.image[1]["#text"],
+                img: track.image[2]["#text"],
             };
 
             $(".recent-tracks").append(
@@ -61,6 +61,12 @@ function getRecentTracks (limit) {
         });
 
         $(".recent-tracks").addClass("animated fadeInDown");
+        
+        $(".recent-tracks a").click(function(){
+            $(this).parent().siblings().removeClass("selected");
+            $(this).parent().toggleClass("selected");
+            return false;
+        });
     });
 
 

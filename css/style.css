@@ -10,11 +10,11 @@ body {
     color: #ddd;
     text-shadow: rgba(0, 0, 0, 0.1) 0 2px 0;
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    letter-spacing: 1px;
+/*    letter-spacing: 1px;*/
     font-weight: 200;
     background-image: radial-gradient(circle farthest-side at 100% 100%, rgb(29, 43, 100) 80%, rgb(14, 21, 58) 100%);
     font-size: 18px;
-    line-height: 1.5em;
+/*    line-height: 1.5em;*/
 }
 
 
@@ -47,8 +47,6 @@ a:hover {
 
 
 h2 {
-/*    outline: 1px solid red;*/
-/*    border-bottom: 1px solid rgba(255,255,255,0.5);*/
     line-height: 2em;
     margin: 0;
     font-size: 36px;
@@ -59,6 +57,76 @@ h2 {
 
 
 
+
+
+
+/* Main content */
+/* --------------------------------------------------- */
+
+
+
+
+.recent-tracks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-tracks li {
+    padding: 0;
+    margin: 2px;
+    float: left;
+    background-size: cover;
+}
+
+.recent-tracks li a {
+    display: block;
+    height: 77px;
+    width: 77px;
+    margin: 0;
+    padding: 2px 0 0 4px;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 0px;
+}
+
+.recent-tracks li:hover {
+    -webkit-transform: scale(1.2);
+}
+
+.recent-tracks li.selected:hover a {
+    -webkit-transform: none;
+}
+
+.recent-tracks li.selected {
+    position: relative;
+    z-index: 2;
+    -webkit-transform: scale(1.5);
+}
+
+.recent-tracks li.selected a {
+    background: rgba(0,0,0,0.9);
+}
+
+.recent-tracks li.selected a span {
+    display: inline-block;
+}
+
+.recent-tracks li a span {
+    display: none;
+}
+.recent-tracks li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* Header image  */
+/* --------------------------------------------------- */
 
 h1 {
     text-shadow: none;
@@ -82,39 +150,6 @@ h1 {
             transform: skew(-5deg,-10deg);
 }
 
-
-
-.recent-tracks {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.recent-tracks li {
-    padding: 0;
-    margin: 0 0 10px 0;
-    height: 40px;
-}
-
-.recent-tracks li a {
-    display: block;
-    height: 40px;
-    margin: 0;
-}
-
-
-.recent-tracks .track-image {
-    height: 40px;
-    width: 40px;
-    vertical-align: middle;
-    display: inline-block;
-    overflow: hidden;
-    float: left;
-    margin-right: 10px;
-}
-
-
-
 .james {
     display: block;
 }
@@ -122,14 +157,6 @@ h1 {
 .aitken {
     display: block;
     margin-left: 0.8em;
-}
-
-
-
-.truncate {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 
@@ -249,7 +276,7 @@ nav ul li a {
     }
 
     section {
-        height: 313px;
+/*        height: 313px;*/
         padding: 5px 20px 0 20px;
     }
 
@@ -265,7 +292,7 @@ nav ul li a {
     }
 
     section {
-        height: 365px;
+/*        height: 365px;*/
         padding: 5px 20px 0 20px;
     }
 
@@ -286,3 +313,12 @@ nav ul li a {
 .cf:after {
     clear: both;
 }
+
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
