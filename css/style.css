@@ -77,6 +77,7 @@ h2 {
     margin: 2px;
     float: left;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .recent-tracks li a {
@@ -84,10 +85,11 @@ h2 {
     height: 77px;
     width: 77px;
     margin: 0;
-    padding: 2px 0 0 4px;
+    padding: 2px 2px 2px 4px;
     text-decoration: none;
     font-size: 10px;
     letter-spacing: 0px;
+    border-radius: 5px;
 }
 
 .recent-tracks li:hover {
@@ -105,7 +107,7 @@ h2 {
 }
 
 .recent-tracks li.selected a {
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.8);
 }
 
 .recent-tracks li.selected a span {
@@ -115,6 +117,12 @@ h2 {
 .recent-tracks li a span {
     display: none;
 }
+
+.recent-tracks li.selected a span.artist {
+    margin-bottom: 3px;
+}
+
+
 .recent-tracks li a:hover {
     color: #fff;
     text-decoration: none;

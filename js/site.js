@@ -1,6 +1,11 @@
 "use strict";
 
 $(document).ready(function () {
+    
+    $("body").click(function () {
+        $(".recent-tracks li").removeClass("selected");
+    });
+    
     skrollr.init({
         forceHeight: false
     });
@@ -60,7 +65,7 @@ function getRecentTracks (limit) {
             );
         });
 
-        $(".recent-tracks").addClass("animated fadeInDown");
+        $(".recent-tracks").addClass("animated fadeIn");
         
         $(".recent-tracks a").click(function(){
             $(this).parent().siblings().removeClass("selected");
