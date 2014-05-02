@@ -200,7 +200,8 @@ hr {
 section {
     float: left;
     overflow: hidden;
-/*    width: 100%;*/
+    width: 100%;
+    text-align: center;
     padding: 20px;
     position: relative;
 }
@@ -273,6 +274,7 @@ nav ul li a {
     }
 
     section {
+        text-align: left;
         height: 360px;
         padding: 5px 20px 0 20px;
     }
@@ -288,6 +290,8 @@ nav ul li a {
     }
 
     section {
+        text-align: left;
+        height: 360px;
         padding: 5px 20px 0 20px;
     }
 
@@ -303,6 +307,8 @@ nav ul li a {
     }
 
     section {
+        text-align: left;
+        height: 360px;
         padding: 5px 20px 0 20px;
     }
 
