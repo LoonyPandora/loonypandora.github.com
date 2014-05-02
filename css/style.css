@@ -9,7 +9,7 @@ img {
 body {
     color: #ddd;
     text-shadow: rgba(0, 0, 0, 0.1) 0 2px 0;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 /*    letter-spacing: 1px;*/
     font-weight: 200;
     background-image: radial-gradient(circle farthest-side at 100% 100%, rgb(29, 43, 100) 80%, rgb(14, 21, 58) 100%);
@@ -200,21 +200,25 @@ hr {
 section {
     float: left;
     overflow: hidden;
-    width: 100%;
+/*    width: 100%;*/
     padding: 20px;
     position: relative;
 }
 
 
 
-.daft-cow {
-    max-width: 150px;
-    margin: 0 auto;
-    display: block;
-    padding: 25px;
-    border: 2px solid white;
+.profile-image {
+    width: 160px;
+    height: 160px;
+/*    margin: 0 auto;*/
+/*    display: block;*/
+/*    border: 2px solid white;*/
     background-color: rgba(255,255,255,0.1);
-    border-radius: 125px;
+    border-radius: 80px;
+}
+
+.daft-cow {
+    padding: 10px;
 }
 
 
@@ -284,7 +288,6 @@ nav ul li a {
     }
 
     section {
-/*        height: 313px;*/
         padding: 5px 20px 0 20px;
     }
 
@@ -300,7 +303,6 @@ nav ul li a {
     }
 
     section {
-/*        height: 365px;*/
         padding: 5px 20px 0 20px;
     }
 
