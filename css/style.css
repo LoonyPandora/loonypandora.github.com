@@ -12,6 +12,7 @@ body {
 }
 
 section {
+    position: relative;
     float: left;
     overflow: hidden;
     width: 100vw;
@@ -36,6 +37,18 @@ h1 {
     text-align: left;
 }
 
+section.stripe:before {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    top: 100%;
+    left: -25px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.4);
+    content: '';
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: rotate(-39deg);
+}
 
 
 section > section {
