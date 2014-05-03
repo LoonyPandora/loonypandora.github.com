@@ -1,340 +1,124 @@
-/* Styles for everything
-================================================== */
 
 
-img {
-    max-width: 100%;
+* {
+    box-sizing: border-box;
 }
 
 body {
-    color: #ddd;
-    text-shadow: rgba(0, 0, 0, 0.1) 0 2px 0;
-    font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-/*    letter-spacing: 1px;*/
-    font-weight: 200;
-    background-image: radial-gradient(circle farthest-side at 100% 100%, rgb(29, 43, 100) 80%, rgb(14, 21, 58) 100%);
-    font-size: 18px;
-/*    line-height: 1.5em;*/
-}
-
-
-a {
-    font-weight: normal;
     color: #fff;
-    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
-
-a:hover {
-    color: #ddd;
-}
-
-
-.container {
-    padding: 0;
-}
-
-
-
-.strapline {
-    display: block;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 36px;
-    line-height: 1.5em;
-    font-weight: 200;
-}
-
-
-h2 {
-    line-height: 2em;
-    margin: 0;
-    font-size: 36px;
-    font-weight: 200;
-}
-
-
-
-
-
-
-
-
-/* Main content */
-/* --------------------------------------------------- */
-
-
-
-
-.recent-tracks {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.recent-tracks li {
-    padding: 0;
-    margin: 2px;
-    float: left;
-    background-size: cover;
-    border-radius: 5px;
-}
-
-.recent-tracks li a {
-    display: block;
-    height: 77px;
-    width: 77px;
-    margin: 0;
-    padding: 2px 2px 2px 4px;
-    text-decoration: none;
-    font-size: 10px;
-    letter-spacing: 0px;
-    border-radius: 5px;
-}
-
-.recent-tracks li:hover {
-    -webkit-transform: scale(1.2);
-}
-
-.recent-tracks li.selected:hover a {
-    -webkit-transform: none;
-}
-
-.recent-tracks li.selected {
-    position: relative;
-    z-index: 2;
-    -webkit-transform: scale(1.5);
-}
-
-.recent-tracks li.selected a {
-    background: rgba(0,0,0,0.8);
-}
-
-.recent-tracks li.selected a span {
-    display: inline-block;
-}
-
-.recent-tracks li a span {
-    display: none;
-}
-
-.recent-tracks li.selected a span.artist {
-    margin-bottom: 3px;
-}
-
-
-.recent-tracks li a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-
-
-
-
-/* Header image  */
-/* --------------------------------------------------- */
-
-h1 {
-    text-shadow: none;
-    color: #fff;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: normal;
-    font-size: 160px;
-    letter-spacing: -8px;
-    line-height: 0.8em;
-    text-indent: -0.6em;
-    color: #fff;
-    text-rendering: optimizeLegibility;
-
-    margin: 0 auto 80px auto;
-    opacity: 1;
-
-    -webkit-transform: skew(-5deg,-10deg);
-       -moz-transform: skew(-5deg,-10deg);
-            transform: skew(-5deg,-10deg);
-}
-
-.james {
-    display: block;
-}
-
-.aitken {
-    display: block;
-    margin-left: 0.8em;
-}
-
-
-
-
-
-/* Skrollr default things */
-header {
-    position: relative;
-    margin: 80px 0 80px 0;
-}
-
-
-/* Main content */
-/* --------------------------------------------------- */
-
-.main-content {
-    padding-top: 40px;
-}
-
-
-hr {
-    border: none;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-    width: 100%;
-}
-
-
-
-/* Individual sections */
-/* --------------------------------------------------- */
 
 section {
     float: left;
     overflow: hidden;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    position: relative;
+    width: 100vw;
 }
 
-
-
-.profile-image {
-    width: 160px;
-    height: 160px;
-/*    margin: 0 auto;*/
-/*    display: block;*/
-/*    border: 2px solid white;*/
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 80px;
-}
-
-.daft-cow {
-    padding: 10px;
-}
-
-
-
-
-
-
-
-
-/* Navigation */
-/* --------------------------------------------------- */
-
-nav {
-    margin-bottom: 40px;
-}
-nav, nav ul {
-    height: 40px;
-}
-
-nav ul {
-    width: 250px;
-    list-style: none;
-    margin: 0 auto;
+h1, p {
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    float: left;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    display: block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 32px;
+h1 {
     text-align: center;
 }
 
 
 
-
-
-
-/* Media Queries */
-/* --------------------------------------------------- */
-
-@media (min-width: 768px) { 
-    .container {
-        padding: 0 15px;
+@media screen and (min-width: 640px) {
+    h1 { font-size: 5vw;   }
+    p  {
+        font-size: 2.5vw;
+        line-height: 3vw;
     }
 
     section {
-        text-align: left;
-        height: 360px;
-        padding: 5px 20px 0 20px;
+        width: 50vw;
+        height: 50vw;
     }
-
-    hr { width: 680px; }
-    .col-1 { width: 360px; }
-    .col-2 { width: 720px; }
 }
 
-@media (min-width: 992px) { 
-    .container {
-        padding: 0 15px;
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size: 4vw;
+        line-height: 11vw;
+        height: 11.11111111111vw;
     }
-
-    section {
-        text-align: left;
-        height: 360px;
-        padding: 5px 20px 0 20px;
-    }
-
-    hr { width: 899px; }
-    .col-1 { width: 313px; }
-    .col-2 { width: 626px; }
-}
-
-@media (min-width: 1200px) { 
-    .container {
-        width: 1125px;
-        padding: 0 15px;
+    p  {
+        font-size: 1.65vw;
+        line-height: 2vw;
     }
 
     section {
-        text-align: left;
-        height: 360px;
-        padding: 5px 20px 0 20px;
+        width: 33.333vw;
+        height: 33.333vw;
     }
 
-    hr { width: 1055px; }
-    .col-1 { width: 365px; }
-    .col-2 { width: 730px; }
+    section > section {
+        width: 11.10vw;
+        height: 11.10vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 3.4vw;
+        line-height: 8vw;
+        height: 8.33333333333333vw;
+    }
+    p  {
+        font-size: 1.3vw;
+        line-height: 1.6vw;
+    }
+
+    section {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    section > section {
+        width: 8.33333333333333vw;
+        height: 8.33333333333333vw;
+    }
 }
 
 
+/* colors */
 
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
+.cool {
+    background-color: rgba(39, 174, 96,1.0);
+    outline-color: rgba(39, 174, 96,1.0);
 }
 
-.cf:after {
-    clear: both;
+.warm {
+    background-color: rgba(211, 84, 0, 1.0);
+    outline-color: rgba(211, 84, 0, 1.0);
 }
 
-
-.truncate {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.clean {
+    background-color: rgba(41, 128, 185,1.0);
+    outline-color: rgba(41, 128, 185,1.0);
 }
 
+.regal {
+    background-color: rgba(142, 68, 173,1.0);
+    outline-color: rgba(142, 68, 173,1.0);
+}
 
+.night {
+    background-color: rgba(44, 62, 80,1.0);
+    outline-color: rgba(44, 62, 80,1.0);
+}
+
+.bright {
+    background-color: rgba(241, 196, 15, 1.0);
+    outline-color: rgba(241, 196, 15, 1.0);
+}
+
+/* Cover up pixel gaps when resizing */
+section > section {
+    outline-width: 2px;
+    outline-style: solid;
+}
