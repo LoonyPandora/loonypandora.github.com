@@ -7,6 +7,7 @@
 body {
     color: #fff;
     font-weight: bold;
+    font-family: "Helvetica Neue Condensed";
     text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 
@@ -14,19 +15,27 @@ section {
     float: left;
     overflow: hidden;
     width: 100vw;
-    border: 10px solid rgba(255,255,255,0.2);
-    padding: 10px;
+    height: 50vw;
+/*    border: 10px solid rgba(255,255,255,0.2);*/
+    padding: 5px 10px 10px 15px;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
     padding: 0;
+    text-rendering: optimizeLegibility;
 }
 
+h2 {
+    letter-spacing: -2px;
+    font-size: 10vw;
+    line-height: 12.5vw;
+}
 
-h1 {
+h1 {    
     text-align: left;
 }
+
 
 
 section > section {
@@ -49,7 +58,12 @@ section > section {
 
     section {
         width: 50vw;
-        height: 50vw;
+        height: 40vw;
+    }
+
+    h2 {
+        font-size: 10vw;
+        line-height: 12.5vw;
     }
 }
 
@@ -66,7 +80,12 @@ section > section {
 
     section {
         width: 33.333vw;
-        height: 33.333vw;
+        height: 26.666vw;
+    }
+
+    h2 {
+        font-size: 6.66666vw;
+        line-height: 8.33333vw;
     }
 }
 
@@ -76,6 +95,7 @@ section > section {
         line-height: 6vw;
         height: 6.25vw;
     }
+
     p  {
         font-size: 1.3vw;
         line-height: 1.6vw;
@@ -83,7 +103,12 @@ section > section {
 
     section {
         width: 25vw;
-        height: 25vw;
+        height: 20vw;
+    }
+    
+    h2 {
+        font-size: 5vw;
+        line-height: 6vw;
     }
 
 }
