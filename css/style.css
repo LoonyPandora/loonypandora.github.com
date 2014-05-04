@@ -14,10 +14,10 @@ body {
 a {
     display: block;
 /*    background-color: rgba(0,0,0,0.5);*/
-    -webkit-transition: text-shadow 0.2s ease-in-out;
-       -moz-transition: text-shadow 0.2s ease-in-out;
-        -ms-transition: text-shadow 0.2s ease-in-out;
-            transition: text-shadow 0.2s ease-in-out;
+    -webkit-transition: text-shadow 0.1s linear;
+       -moz-transition: text-shadow 0.1s linear;
+        -ms-transition: text-shadow 0.1s linear;
+            transition: text-shadow 0.1s linear;
 }
 
 a, a:visited {
@@ -67,21 +67,15 @@ h1 {
 
 .recent-tracks li {
     float: left;
-    font-size: 12px;
     background-size: cover;
-    border-radius: 2px;
-}
-
-.recent-tracks li a {
-    font-size: 11px;
-    padding: 2px 2px 2px 3px;
-    overflow: hidden;
-    display: block;
-    border-radius: 2px;
 }
 
 .recent-tracks li:hover a {
-    background: rgba(0,0,0,0.5);
+/*    -webkit-transition: background 0.1s linear;*/
+/*       -moz-transition: background 0.1s linear;*/
+/*        -ms-transition: background 0.1s linear;*/
+/*            transition: background 0.1s linear;*/
+    background: rgba(255,255,255,0.3);
 }
 
 
@@ -167,12 +161,17 @@ h1 {
     }
     
     .recent-tracks {
-        margin: 17px 0 0 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 25.4vw;
+        margin: 16px 0 0 0;
     }
     
     .recent-tracks li, .recent-tracks li a {
-        width: 5.5vw;
-        height: 5.5vw;
+        width: 6.3vw;
+        height: 6.3vw;
     }
 }
 
