@@ -49,7 +49,7 @@ section {
 }
 
 h1 {
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     margin: 0;
     padding: 15px 0 0 25px;
     text-rendering: optimizeLegibility;
@@ -151,22 +151,29 @@ h1 {
     }
 
     h1 {
-        font-size: 4.7vw;
+        position: absolute;
+        z-index: 2;
+        font-size: 4.65vw;
         line-height: 5.25vw;
     }
     
     .recent-tracks {
         position: absolute;
-        left: -2px;
+        left: -3px;
         right: 0;
-        bottom: 0;
-        width: 25.5vw;
-        margin: 16px 0 0 0;
+        top: 0;
+        width: 26vw;
+        margin: 0;
     }
-    
+
     .recent-tracks li, .recent-tracks li a {
-        width: 5.1vw;
-        height: 5.4vw;
+        opacity: 0.5;
+        width: 6.35vw;
+        height: 6.3vw;
+    }
+
+    .recent-tracks li:hover {
+        opacity: 1;
     }
 }
 
