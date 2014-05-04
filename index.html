@@ -36,8 +36,41 @@
 <body>
 
     <section class="warm">
-        <h1>James Aitken</h1>
-        <i class="fa fa-long-arrow-right quarter"></i>
+        <h1>James Aitken <i class="fa fa-long-arrow-right quarter"></i></h1>
+    </section>
+
+    <section class="clean">
+        <a href="https://github.com/LoonyPandora" class="fa fa-linkedin quarter"></a>
+        <a href="https://github.com/LoonyPandora" class="fa fa-github-alt quarter"></a>
+        <a href="https://github.com/LoonyPandora" class="fa fa-twitter quarter"></a>
+        <a href="https://github.com/LoonyPandora" class="fa fa-dribbble quarter"></a>
+    </section>
+
+    <section class="cool">
+        <h1>Full Stack<br>Web<br>Developer</h1>
+    </section>
+
+    <section class="regal">
+        <img src="/avatar/headshot.jpg" class="headshot">
+    </section>
+
+
+    <section class="cool">
+        <h1>Music <i class="fa fa-music"></i></h1>
+        <ol class="recent-tracks"></ol>
+    </section>
+
+    <section class="bright">
+        <h1>East<br>London<br>Studio</h1>
+    </section>
+
+
+    <section class="night">
+        <img src="/avatar/vector.svg" class="headshot">
+    </section>
+
+    <section class="warm">
+        <h1>Things<br>I Make <i class="fa fa-long-arrow-right quarter"></i></h1>
     </section>
 
     <section class="bright">
@@ -48,55 +81,27 @@
         <h1>jQuery<br>Word<br>Clock</h1>
     </section>
 
-    <section class="night">
+    <section class="regal">
         <h1>Animated<br>Canvas<br>Demo</h1>
     </section>
 
     <section class="clean">
-        <a href="https://github.com/LoonyPandora" class="fa fa-linkedin quarter"></a>
-        <a href="https://github.com/LoonyPandora" class="fa fa-github-alt quarter"></a>
-        <a href="https://github.com/LoonyPandora" class="fa fa-twitter quarter"></a>
-        <a href="https://github.com/LoonyPandora" class="fa fa-dribbble quarter"></a>
-    </section>
-
-    <section class="regal">
-        <img src="/avatar/headshot.jpg" class="headshot">
-    </section>
-
-    <section class="cool">
-        <h1>Music</h1>
-        <ol class="recent-tracks"></ol>
-        
+        <h1>League<br>Table<br>Dataviz</h1>
     </section>
 
     <section class="warm">
-        <h1>Things<br>I Make</h1>
-        <img src="/avatar/vector.svg" class="quarter">
-    </section>
-
-    <section class="regal">
-        <h1>Full Stack<br>Web<br>Developer</h1>
-    </section>
-
-    <section class="bright">
-        <h1>East<br>London<br>Studio</h1>
-    </section>
-
-    <section class="clean">
-        <h1>Premier<br>League<br>Table</h1>
+        <h1>Perl<br>CPAN<br>Modules</h1>
     </section>
 
     <!-- Mustache Templates -->
     <script id="recent-tracks-template" type="text/template">
         <li style="background-image: url('{{ img }}')">
-            <a href="#" title="{{ artist }} – {{ track }}. From the album '{{ album }}'. {{ date }}" class="">
-                <span class="artist">{{ artist }}</span>
-                <span class="track">{{ track }}</span>
-            </a>
+            <a href="#" title="{{ artist }} – {{ track }}. From the album '{{ album }}'. {{ date }}"></a>
         </li>
     </script>
 
     <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/mustache.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/site.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

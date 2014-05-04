@@ -7,7 +7,7 @@
 body {
     color: #fff;
     font-weight: bold;
-    font-family: "Helvetica Neue Condensed";
+    font-family: "Helvetica Neue";
     text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 
@@ -25,17 +25,47 @@ a, a:visited {
 section {
     position: relative;
     float: left;
-    overflow: hidden;
+/*    overflow: hidden;*/
     width: 100vw;
     height: 50vw;
 }
 
 h1 {
-    letter-spacing: -2px;
-    margin: 0;
-    padding: 10px;
+    letter-spacing: -3px;
+    margin: 5px 0 0 15px;
+    padding: 0;
     text-rendering: optimizeLegibility;
 }
+
+
+
+/* Recent Tracks */
+
+
+.recent-tracks {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-tracks li {
+    float: left;
+    font-size: 12px;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+.recent-tracks li a {
+    font-size: 11px;
+    padding: 2px 2px 2px 3px;
+    overflow: hidden;
+    display: block;
+    border-radius: 2px;
+}
+
+.recent-tracks li:hover a {
+    background: rgba(0,0,0,0.5);
+}
+
 
 
 /* Default non-media query size */
@@ -88,6 +118,7 @@ h1 {
         line-height: 1.6vw;
     }
 
+    /* 4:3 Ratio */
     section {
         width: 25vw;
         height: 20vw;
@@ -113,6 +144,15 @@ h1 {
         font-size: 5vw;
         line-height: 6vw;
     }
+    
+    .recent-tracks {
+        margin: 17px 0 0 20px;
+    }
+    
+    .recent-tracks li, .recent-tracks li a {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
 }
 
 
@@ -128,69 +168,4 @@ h1 {
 
 
 
-
-/* Recent Tracks */
-
-
-.recent-tracks {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.recent-tracks li {
-    padding: 0;
-    margin: 2px;
-    float: left;
-    background-size: cover;
-    border-radius: 5px;
-}
-
-.recent-tracks li a {
-    display: block;
-    height: 77px;
-    width: 77px;
-    margin: 0;
-    padding: 2px 2px 2px 4px;
-    text-decoration: none;
-    font-size: 10px;
-    letter-spacing: 0px;
-    border-radius: 5px;
-}
-
-.recent-tracks li:hover {
-    -webkit-transform: scale(1.2);
-}
-
-.recent-tracks li.selected:hover a {
-    -webkit-transform: none;
-}
-
-.recent-tracks li.selected {
-    position: relative;
-    z-index: 2;
-    -webkit-transform: scale(1.5);
-}
-
-.recent-tracks li.selected a {
-    background: rgba(0,0,0,0.8);
-}
-
-.recent-tracks li.selected a span {
-    display: inline-block;
-}
-
-.recent-tracks li a span {
-    display: none;
-}
-
-.recent-tracks li.selected a span.artist {
-    margin-bottom: 3px;
-}
-
-
-.recent-tracks li a:hover {
-    color: #fff;
-    text-decoration: none;
-}
 
