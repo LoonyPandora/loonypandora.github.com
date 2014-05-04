@@ -65,12 +65,13 @@
 
     <section class="cool">
         <h1>Music</h1>
-        <img src="/avatar/vector.svg" class="quarter">
+        <ol class="recent-tracks"></ol>
         
     </section>
 
     <section class="warm">
         <h1>Things<br>I Make</h1>
+        <img src="/avatar/vector.svg" class="quarter">
     </section>
 
     <section class="regal">
@@ -85,6 +86,15 @@
         <h1>Premier<br>League<br>Table</h1>
     </section>
 
+    <!-- Mustache Templates -->
+    <script id="recent-tracks-template" type="text/template">
+        <li style="background-image: url('{{ img }}')">
+            <a href="#" title="{{ artist }} – {{ track }}. From the album '{{ album }}'. {{ date }}" class="">
+                <span class="artist">{{ artist }}</span>
+                <span class="track">{{ track }}</span>
+            </a>
+        </li>
+    </script>
 
     <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/site.js" type="text/javascript" charset="utf-8"></script>
