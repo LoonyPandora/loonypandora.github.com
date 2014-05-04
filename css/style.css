@@ -11,59 +11,44 @@ body {
     text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 
+a, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.quarter {
+    text-align: center;
+    display: block;
+    float: left;
+}
+
 section {
     position: relative;
     float: left;
     overflow: hidden;
     width: 100vw;
     height: 50vw;
-/*    border: 10px solid rgba(255,255,255,0.2);*/
-    padding: 5px 10px 10px 15px;
 }
 
-h1, h2 {
+h1 {
+    letter-spacing: -2px;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     text-rendering: optimizeLegibility;
 }
 
-h2 {
-    letter-spacing: -2px;
+
+/* Default non-media query size */
+h1 {
     font-size: 10vw;
     line-height: 12.5vw;
 }
 
-h1 {    
-    text-align: left;
-}
-
-section.stripe:before {
-    position: absolute;
-    display: block;
-    width: 100vw;
-    top: 100%;
-    left: -25px;
-    height: 50px;
-    background-color: rgba(0,0,0,0.4);
-    content: '';
-    -webkit-transform-origin: 0 0;
-    -webkit-transform: rotate(-39deg);
-}
 
 
-section > section {
-    border: none;
-    color: #333;
-    text-shadow: none;
-    border: none;
-    width: 33% !important;
-    height: 100px;
-    outline: 1px solid red;
-}
-
+/* Media Queries */
 
 @media screen and (min-width: 640px) {
-    h1 { font-size: 5vw;   }
     p  {
         font-size: 2.5vw;
         line-height: 3vw;
@@ -74,18 +59,13 @@ section > section {
         height: 40vw;
     }
 
-    h2 {
+    h1 {
         font-size: 10vw;
         line-height: 12.5vw;
     }
 }
 
 @media screen and (min-width: 900px) {
-    h1 {
-        font-size: 4vw;
-        line-height: 8vw;
-        height: 8.33333vw;
-    }
     p  {
         font-size: 1.65vw;
         line-height: 2vw;
@@ -96,19 +76,13 @@ section > section {
         height: 26.666vw;
     }
 
-    h2 {
+    h1 {
         font-size: 6.66666vw;
         line-height: 8.33333vw;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    h1 {
-        font-size: 3vw;
-        line-height: 6vw;
-        height: 6.25vw;
-    }
-
     p  {
         font-size: 1.3vw;
         line-height: 1.6vw;
@@ -118,38 +92,36 @@ section > section {
         width: 25vw;
         height: 20vw;
     }
-    
-    h2 {
+
+    .quarter {
+        font-size: 8vw;
+        width: 50%;
+        height: 10vw;
+        line-height: 10vw;
+    }
+
+    .headshot {
+        border-radius: 30px;
+        width: 50%;
+        display: block;
+        border: 10px solid rgba(255,255,255,0.2);
+        margin: 3.5vw auto;
+        line-height: 10vw;
+    }
+
+    h1 {
         font-size: 5vw;
         line-height: 6vw;
     }
-
 }
 
 
 /* colors */
 
-.cool {
-    background-color: rgba(39, 174, 96,1.0);
-}
-
-.warm {
-    background-color: rgba(211, 84, 0, 1.0);
-}
-
-.clean {
-    background-color: rgba(41, 128, 185,1.0);
-}
-
-.regal {
-    background-color: rgba(142, 68, 173,1.0);
-}
-
-.night {
-    background-color: rgba(44, 62, 80,1.0);
-}
-
-.bright {
-    background-color: rgba(241, 196, 15, 1.0);
-}
+.cool   { background-color: rgba(39,  174, 96,  1.0); }
+.warm   { background-color: rgba(211, 84,  0,   1.0); }
+.clean  { background-color: rgba(41,  128, 185, 1.0); }
+.regal  { background-color: rgba(142, 68,  173, 1.0); }
+.night  { background-color: rgba(44,  62,  80,  1.0); }
+.bright { background-color: rgba(241, 196, 15,  1.0); }
 
