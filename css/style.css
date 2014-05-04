@@ -51,7 +51,7 @@ section {
 h1 {
     letter-spacing: -3px;
     margin: 0;
-    padding: 5px 0 0 15px;
+    padding: 15px 0 0 25px;
     text-rendering: optimizeLegibility;
 }
 
@@ -131,15 +131,10 @@ h1 {
 }
 
 @media screen and (min-width: 1200px) {
-    p  {
-        font-size: 1.3vw;
-        line-height: 1.6vw;
-    }
-
     /* 4:3 Ratio */
     section, section > a {
         width: 25vw;
-        height: 20vw;
+        height: 18.75vw;
     }
 
     .quarter {
@@ -156,22 +151,22 @@ h1 {
     }
 
     h1 {
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4.7vw;
+        line-height: 5.25vw;
     }
     
     .recent-tracks {
         position: absolute;
-        bottom: 0;
-        left: 0;
+        left: -2px;
         right: 0;
-        width: 25.4vw;
+        bottom: 0;
+        width: 25.5vw;
         margin: 16px 0 0 0;
     }
     
     .recent-tracks li, .recent-tracks li a {
-        width: 6.3vw;
-        height: 6.3vw;
+        width: 5.1vw;
+        height: 5.4vw;
     }
 }
 
@@ -179,9 +174,10 @@ h1 {
 /* colors */
 
 .cool   { background-color: rgba(39,  174, 96,  1.0); }
-.warm   { background-color: rgba(211, 84,  0,   1.0); }
+.warm   { background-color: rgba(192, 57, 43,   1.0); }
 .clean  { background-color: rgba(41,  128, 185, 1.0); }
 .regal  { background-color: rgba(142, 68,  173, 1.0); }
 .night  { background-color: rgba(44,  62,  80,  1.0); }
-.bright { background-color: rgba(241, 196, 15,  1.0); }
-
+.bright { background-color: rgba(243, 156, 18,  1.0); }
+/*rgba(243, 156, 18,1.0)*/
+rgba(192, 57, 43,1.0)

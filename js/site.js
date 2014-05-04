@@ -5,7 +5,7 @@ $(document).ready(function () {
         $(".recent-tracks li").removeClass("selected");
     });
 
-    getRecentTracks(8);
+    getRecentTracks(10);
     
     repaintOnResize("h1, a, img, section");
 });
