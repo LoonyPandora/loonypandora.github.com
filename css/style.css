@@ -124,6 +124,12 @@ h1 {
         height: 26.666vw;
     }
 
+    .headshot {
+        display: block;
+        margin-top: -2vw;
+        width: 33.333vw;
+    }
+
     h1 {
         font-size: 6.66666vw;
         line-height: 8.33333vw;
@@ -150,12 +156,9 @@ h1 {
     }
 
     .headshot {
-        border-radius: 30px;
-        width: 50%;
         display: block;
-        border: 10px solid rgba(255,255,255,0.2);
-        margin: 3.5vw auto;
-        line-height: 10vw;
+        margin-top: -1vw;
+        width: 25vw;
     }
 
     h1 {
