@@ -31,7 +31,7 @@ function getRecentTracks (limit) {
     request.done(function (response) {
         var $template = $("#recent-tracks-template").html();
 
-        $.each(response.recenttracks.track, function (i, track) {
+        $.each(response.recenttracks.track.reverse(), function (i, track) {
             // Check nowplaying / date played status
             // API will return double for an item that is now playing. So skip if it is
             var date;
