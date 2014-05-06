@@ -179,7 +179,6 @@ h1 {
         font-size: 1.1vw;
         line-height: 1.4vw;
         opacity: 1;
-/*        line-height: 24px;*/
     }
 
 }
@@ -193,5 +192,46 @@ h1 {
 .regal  { background-color: rgba(142, 68,  173, 1.0); }
 .night  { background-color: rgba(44,  62,  80,  1.0); }
 .bright { background-color: rgba(243, 156, 18,  1.0); }
-/*rgba(243, 156, 18,1.0)*/
-rgba(192, 57, 43,1.0)
+
+
+
+/* Background images */
+.background {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+    position: relative;
+}
+
+.background-football {
+    background-image: url("/img/football.svg");
+}
+
+.background-heart {
+    background-image: url("/img/heart.svg");
+}
+
+.background-onion {
+    background-image: url("/img/onion.svg");
+    background-size: 75%;
+}
+
+.background-clock:before {
+    outline: 1px solid red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    height: 18.75vw;
+    line-height: 18.75vw;
+    font-size: 18.75vw;
+    text-shadow: none;
+    color: rgba(0,0,0,0.1);
+}
+
+
+
+
+
