@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     getRecentTracks(9);
     
-    repaintOnResize("h1, a, img, section");
+    repaintOnResize("h1, a, img, section, li");
 });
 
 
@@ -31,6 +31,8 @@ function getRecentTracks (limit) {
     request.done(function (response) {
         var $template = $("#recent-tracks-template").html();
 
+        var renderData = [];
+
         $.each(response.recenttracks.track.reverse(), function (i, track) {
             // Check nowplaying / date played status
             // API will return double for an item that is now playing. So skip if it is
@@ -41,21 +43,25 @@ function getRecentTracks (limit) {
                 return true;
             }
 
-            var renderData = {
+            renderData.push({
                 url: track.url,
                 artist: track.artist["#text"],
                 track: track.name,
                 album: track.album["#text"],
                 date: date,
                 img: track.image[2]["#text"],
-            };
+            });
 
             $(".recent-tracks").append(
-                Mustache.render($template, renderData)
+                Mustache.render($template, renderData[i])
             );
         });
 
-        $(".recent-tracks").addClass("animated fadeIn");
+        // Add the metadata about the currently playing track and show it
+        $(".recent-tracks").append(
+            Mustache.render($("#recent-tracks-metadata").html(), renderData.slice(-1)[0])
+        ).addClass("animated fadeIn");
+
     });
 
     request.fail(function () {
