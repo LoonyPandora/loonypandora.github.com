@@ -140,13 +140,13 @@ h1 {
     .quarter {
         font-size: 8vw;
         width: 50%;
-        height: 10vw;
-        line-height: 10vw;
+        height: 9.375vw;
+        line-height: 9.375vw;
     }
 
     .headshot {
         display: block;
-        margin-top: -1vw;
+        margin-top: -1.5vw;
         width: 25vw;
     }
 
