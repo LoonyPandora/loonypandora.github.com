@@ -83,6 +83,14 @@ h1 {
 /*    outline: 1px solid red;*/
 }
 
+.recent-tracks .play-time {
+    color: rgba(255,255,255,0.5);
+    font-weight: normal;
+    text-shadow: none;
+/*    outline: 1px solid red;*/
+}
+
+
 
 
 /* Default non-media query size */
