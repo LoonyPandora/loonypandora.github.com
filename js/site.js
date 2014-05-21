@@ -48,7 +48,7 @@ function getRecentTracks (limit) {
                 artist: track.artist["#text"],
                 track: track.name,
                 album: track.album["#text"],
-                date: date,
+                date: moment.utc(date).fromNow(),
                 img: track.image[2]["#text"],
             });
 
