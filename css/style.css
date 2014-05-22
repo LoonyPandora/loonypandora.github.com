@@ -51,9 +51,9 @@ section {
 h1 {
     letter-spacing: -2px;
     margin: 0;
-    padding: 15px 0 0 25px;
     text-rendering: optimizeLegibility;
 }
+
 
 
 
@@ -93,11 +93,22 @@ h1 {
 
 
 
+
 /* Default non-media query size */
 h1 {
     font-size: 10vw;
     line-height: 12.5vw;
+    padding: 1.1vw 0 0 1.8vw;
 }
+
+/* My name is a two-liner, not 3 like the rest. Size accordingly */
+.my-name h1 {
+    padding: 2.8vw 0 0 0;
+    margin: 0 0 0 -5px;
+    font-size: 6vw;
+    line-height: 6vw;
+}
+
 
 
 
@@ -245,3 +256,32 @@ h1 {
     top: 8px;
     right: 8px;
 }
+
+
+
+/* Make the name panel stand out a little. Most important thing on the page */
+
+.my-name h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgba(0,0,0,0.4);
+    text-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
+}
+
+
+
+
+
+section:last-of-type h1 {
+    letter-spacing: 0;
+    font-size: 1.5vw;
+    line-height: 18vw;
+    padding: 0;
+    display: block;
+    width: 100%;
+    color: black;
+    text-align: center;
+    text-shadow: none;
+}
+
