@@ -238,5 +238,10 @@ h1 {
 
 
 
-
-
+/* Show an icon to indicate external links on sections */
+.external-link:before {
+    content: "\f08e";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
