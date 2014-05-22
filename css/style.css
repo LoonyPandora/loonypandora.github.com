@@ -215,16 +215,13 @@ h1 {
     background-image: url("/img/football.svg");
 }
 
-.background-heart {
-    background-image: url("/img/heart.svg");
-}
-
 .background-onion {
     background-image: url("/img/onion.svg");
     background-size: 75%;
 }
 
-.background-clock:before {
+.background-clock:before,
+.background-heart:before {
     outline: 1px solid red;
     position: absolute;
     top: 0;
