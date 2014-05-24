@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     getRecentTracks(9);
     
-    repaintOnResize("h1, h2, a, img, section, li");
+    repaintOnResize("h1, h2, div, button, a, img, section, li");
 });
 
 
@@ -48,12 +48,15 @@ function getRecentTracks (limit) {
                 return true;
             }
 
+            var momentDate = moment.utc(date, "DD MMM YYYY, HH:mm");
+
             renderData.push({
                 url: track.url,
                 artist: track.artist["#text"],
                 track: track.name,
                 album: track.album["#text"],
-                date: moment.utc(date).fromNow(),
+                date: momentDate.format("ddd, MMM Do YYYY, h:mm a"),
+                humanDate: momentDate.fromNow(),
                 img: track.image[2]["#text"],
             });
 
