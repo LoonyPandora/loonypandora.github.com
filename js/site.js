@@ -7,9 +7,14 @@ $(document).ready(function () {
 
     getRecentTracks(9);
     
-    repaintOnResize("h1, a, img, section, li");
+    repaintOnResize("h1, h2, a, img, section, li");
 });
 
+
+function rotateCube() {
+    $('h2').addClass("animated").lettering();
+    $('.prism').addClass('rotated');
+}
 
 
 
