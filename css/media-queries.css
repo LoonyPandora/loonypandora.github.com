@@ -1,0 +1,70 @@
+@media screen and (min-width: 900px) {
+    p  {
+        font-size: 1.65vw;
+        line-height: 2vw;
+    }
+
+    section {
+        width: 33.333vw;
+        height: 26.666vw;
+    }
+
+    .headshot {
+        display: block;
+        margin-top: -2vw;
+        width: 33.333vw;
+    }
+
+    h1 {
+        font-size: 6.66666vw;
+        line-height: 8.33333vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* 4:3 Ratio */
+    section, section > a {
+        width: 25vw;
+        height: 18.75vw;
+    }
+
+    .quarter {
+        font-size: 8vw;
+        width: 50%;
+        height: 9.375vw;
+        line-height: 9.375vw;
+    }
+
+    .headshot {
+        display: block;
+        margin-top: -1.5vw;
+        width: 25vw;
+    }
+
+    h1 {
+        position: absolute;
+        z-index: 2;
+        font-size: 4.65vw;
+        line-height: 5.25vw;
+    }
+    
+    .recent-tracks {
+        width: 26vw;
+    }
+
+    .recent-tracks li, .recent-tracks li a {
+        opacity: 0.5;
+        width: 6.35vw;
+        height: 6.3vw;
+    }
+
+    .recent-tracks .metadata {
+        height: 6.3vw;
+        width: 19vw;
+        padding: 0.95vw;
+        font-size: 1.1vw;
+        line-height: 1.4vw;
+        opacity: 1;
+    }
+
+}
