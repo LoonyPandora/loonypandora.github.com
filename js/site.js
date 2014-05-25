@@ -7,13 +7,26 @@ $(document).ready(function () {
 
     getRecentTracks(9);
 
-    repaintOnResize("h1, h2, div, p, a, img, section, li");
-
     setupPrism();
-    
+
+    // repaintOnResize("h1, h2, div, p, a, img, section, li");
+    // FIXME: This is bed, remove it. It's Safari only, and should be only done on elements that need it
+    $(window).resize(function() {
+        forceRepaint()
+    });
+
+
     var grid = new hashgrid();
 });
 
+
+function forceRepaint() {
+    var ss = document.styleSheets[0];
+    try {
+        ss.addRule('.xxxxxx', 'position: relative');
+        ss.removeRule(ss.rules.length - 1);
+    } catch(e) {}
+}
 
 function setupPrism() {
     var $container = $(".prism-viewport");
