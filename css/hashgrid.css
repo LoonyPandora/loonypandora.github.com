@@ -1,0 +1,25 @@
+/* Development grid. Press and hold "G" to see it. "H" to keep it visible
+--------------------------------------------------------------------------- */
+
+#grid {
+    position: absolute;
+    top:      0;
+    right:    0;
+    bottom:   0;
+    left:     0;
+    z-index:  9 !important;
+}
+
+#grid div.horiz {
+    height: 9.375vw;
+    border-bottom: 1px dashed rgba(0,0,0,0.8);
+    margin:  0;
+    padding: 0;
+}
+
+#grid div.vert {
+    width: 12.5vw;
+    border-right: 1px dashed rgba(0,0,0,0.8);
+    margin:  0;
+    padding: 0;
+}

@@ -10,6 +10,8 @@ $(document).ready(function () {
     repaintOnResize("h1, h2, div, p, a, img, section, li");
 
     setupPrism();
+    
+    var grid = new hashgrid();
 });
 
 
