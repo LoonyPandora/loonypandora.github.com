@@ -52,14 +52,6 @@ h1 {
     text-rendering: optimizeLegibility;
 }
 
-h2 {
-    letter-spacing: -2px;
-/*    font-size: 70px;*/
-    font-size: 4.5vw;
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-}
 
 
 /* Recent Tracks */
@@ -135,76 +127,6 @@ h1 {
     line-height: 12.5vw;
 }
 
-@media screen and (min-width: 900px) {
-    p  {
-        font-size: 1.65vw;
-        line-height: 2vw;
-    }
-
-    section {
-        width: 33.333vw;
-        height: 26.666vw;
-    }
-
-    .headshot {
-        display: block;
-        margin-top: -2vw;
-        width: 33.333vw;
-    }
-
-    h1 {
-        font-size: 6.66666vw;
-        line-height: 8.33333vw;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    /* 4:3 Ratio */
-    section, section > a {
-        width: 25vw;
-        height: 18.75vw;
-    }
-
-    .quarter {
-        font-size: 8vw;
-        width: 50%;
-        height: 9.375vw;
-        line-height: 9.375vw;
-    }
-
-    .headshot {
-        display: block;
-        margin-top: -1.5vw;
-        width: 25vw;
-    }
-
-    h1 {
-        position: absolute;
-        z-index: 2;
-        font-size: 4.65vw;
-        line-height: 5.25vw;
-    }
-    
-    .recent-tracks {
-        width: 26vw;
-    }
-
-    .recent-tracks li, .recent-tracks li a {
-        opacity: 0.5;
-        width: 6.35vw;
-        height: 6.3vw;
-    }
-
-    .recent-tracks .metadata {
-        height: 6.3vw;
-        width: 19vw;
-        padding: 0.95vw;
-        font-size: 1.1vw;
-        line-height: 1.4vw;
-        opacity: 1;
-    }
-
-}
 
 
 /* colors */
@@ -237,7 +159,6 @@ h1 {
 
 .background-clock:before,
 .background-heart:before {
-    outline: 1px solid red;
     position: absolute;
     top: 0;
     right: 0;
@@ -293,14 +214,22 @@ section:last-of-type h1 {
 
 
 
-#deploy-button {
-    font-size: 5vw;
-    border: none;
-    padding: 0 40px;
-    display: block;
-/*    margin: 30px auto;*/
-    border-radius: 50px;
-/*    font-family: "League Gothic", sans-serif;*/
+
+
+/* Custom Prism Stuff */
+.prism-viewport {
+    width:  100%;
+    height: 60%;
+    left: 0%;
+    top: 20%;
 }
 
-#deploy-button:focus { outline:none; }
+.prism-viewport .front  { background: hsla( 000, 100%, 50%, 0.5 ); }
+.prism-viewport .back   { background: hsla( 090, 100%, 50%, 0.5 ); }
+.prism-viewport .top    { background: hsla( 180, 100%, 50%, 0.5 ); }
+.prism-viewport .bottom { background: hsla( 270, 100%, 50%, 0.5 ); }
+
+.prism-viewport.prism-transparent .front  { background: hsla( 000, 100%, 50%, 0.5 ); }
+.prism-viewport.prism-transparent .back   { background: hsla( 090, 100%, 50%, 0.5 ); }
+.prism-viewport.prism-transparent .top    { background: hsla( 180, 100%, 50%, 0.5 ); }
+.prism-viewport.prism-transparent .bottom { background: hsla( 270, 100%, 50%, 0.5 ); }

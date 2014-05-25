@@ -6,15 +6,53 @@ $(document).ready(function () {
     });
 
     getRecentTracks(9);
-    
+
     repaintOnResize("h1, h2, div, button, a, img, section, li");
+
+
+    setupPrismToggles();
 });
 
 
-function rotateCube() {
-    $('h2').addClass("animated").lettering();
-    $('.prism').addClass('rotated');
+function setupPrismToggles() {
+    var $container = $(".prism-viewport");
+
+    $(".rotate-up").on("click", function () {
+        if ($container.hasClass("show-front")) {
+            $container.removeClass("show-front").addClass("show-top");
+        } else if ($container.hasClass("show-bottom")) {
+            $container.removeClass("show-bottom").addClass("show-front");
+        } else if ($container.hasClass("show-back")) {
+            $container.removeClass("show-back").addClass("show-bottom");
+        } else if ($container.hasClass("show-top")) {
+            $container.removeClass("show-top").addClass("show-back");
+        }
+    })
+
+    $(".rotate-down").on("click", function () {
+        if ($container.hasClass("show-front")) {
+            $container.removeClass("show-front").addClass("show-bottom");
+        } else if ($container.hasClass("show-bottom")) {
+            $container.removeClass("show-bottom").addClass("show-back");
+        } else if ($container.hasClass("show-back")) {
+            $container.removeClass("show-back").addClass("show-top");
+        } else if ($container.hasClass("show-top")) {
+            $container.removeClass("show-top").addClass("show-front");
+        }
+    })
+
+    $(".toggle-backface-visibility").on("click", function () {
+        $container.toggleClass("prism-transparent");
+    })
+
 }
+
+
+
+
+
+
+
 
 
 
