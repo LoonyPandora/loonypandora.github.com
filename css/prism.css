@@ -134,29 +134,27 @@
 
 /*
     Effective rotation of 0 degrees
-    Leave off the final rotation so we can rotate to it from the front / back in a sensible way
-    If we put zero in here, it will always rotate in a clockwise direction, which looks silly
 */
 .prism-viewport.show-top {
-    -webkit-transform: rotateX(-90deg) translateY(50%);
-       -moz-transform: rotateX(-90deg) translateY(50%);
-         -o-transform: rotateX(-90deg) translateY(50%);
-            transform: rotateX(-90deg) translateY(50%);
+    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(0deg);
+       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(0deg);
+         -o-transform: rotateX(-90deg) translateY(50%) rotateX(0deg);
+            transform: rotateX(-90deg) translateY(50%) rotateX(0deg);
 }
 
 /* Effective rotation of 270 degrees */
 .prism-viewport.show-back {
-    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
-       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
-         -o-transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
-            transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
+    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
+       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
+         -o-transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
+            transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
 }
 
 /* Effective rotation of 180 degrees */
 .prism-viewport.show-bottom {
-    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
-       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
-         -o-transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
-            transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
+    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(-180deg);
+       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(-180deg);
+         -o-transform: rotateX(-90deg) translateY(50%) rotateX(-180deg);
+            transform: rotateX(-90deg) translateY(50%) rotateX(-180deg);
 }
 

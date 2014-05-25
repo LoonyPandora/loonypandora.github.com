@@ -7,48 +7,68 @@ $(document).ready(function () {
 
     getRecentTracks(9);
 
-    repaintOnResize("h1, h2, div, button, a, img, section, li");
+    repaintOnResize("h1, h2, div, p, a, img, section, li");
 
-
-    setupPrismToggles();
+    setupPrism();
 });
 
 
-function setupPrismToggles() {
+function setupPrism() {
     var $container = $(".prism-viewport");
 
+    var rotations = -1;
+
     $(".rotate-up").on("click", function () {
-        if ($container.hasClass("show-front")) {
-            $container.removeClass("show-front").addClass("show-top");
-        } else if ($container.hasClass("show-bottom")) {
-            $container.removeClass("show-bottom").addClass("show-front");
-        } else if ($container.hasClass("show-back")) {
-            $container.removeClass("show-back").addClass("show-bottom");
-        } else if ($container.hasClass("show-top")) {
-            $container.removeClass("show-top").addClass("show-back");
-        }
-    })
+        rotations++;
+        rotatePrismUp($container, rotations);
+    });
+
+    $(".prism-viewport").on("click", function () {
+        rotations++;
+        rotatePrismUp($container, rotations);
+    });
 
     $(".rotate-down").on("click", function () {
-        if ($container.hasClass("show-front")) {
-            $container.removeClass("show-front").addClass("show-bottom");
-        } else if ($container.hasClass("show-bottom")) {
-            $container.removeClass("show-bottom").addClass("show-back");
-        } else if ($container.hasClass("show-back")) {
-            $container.removeClass("show-back").addClass("show-top");
-        } else if ($container.hasClass("show-top")) {
-            $container.removeClass("show-top").addClass("show-front");
-        }
+        rotations++;
+        rotatePrismDown($container, rotations);
     })
-
-    $(".toggle-backface-visibility").on("click", function () {
-        $container.toggleClass("prism-transparent");
-    })
-
 }
 
+function rotatePrismUp ($container, rotations) {
+    rotations++;
 
+    if (rotations % 4 === 0) {
+        $container.toggleClass("prism-transparent");
+    }
 
+    if ($container.hasClass("show-front")) {
+        $container.removeClass("show-front").addClass("show-top");
+    } else if ($container.hasClass("show-bottom")) {
+        $container.removeClass("show-bottom").addClass("show-front");
+    } else if ($container.hasClass("show-back")) {
+        $container.removeClass("show-back").addClass("show-bottom");
+    } else if ($container.hasClass("show-top")) {
+        $container.removeClass("show-top").addClass("show-back");
+    }
+}
+
+function rotatePrismDown ($container, rotations) {
+    rotations++;
+
+    if (rotations % 4 === 0) {
+        $container.toggleClass("prism-transparent");
+    }
+
+    if ($container.hasClass("show-front")) {
+        $container.removeClass("show-front").addClass("show-bottom");
+    } else if ($container.hasClass("show-bottom")) {
+        $container.removeClass("show-bottom").addClass("show-back");
+    } else if ($container.hasClass("show-back")) {
+        $container.removeClass("show-back").addClass("show-top");
+    } else if ($container.hasClass("show-top")) {
+        $container.removeClass("show-top").addClass("show-front");
+    }
+}
 
 
 

@@ -138,6 +138,8 @@ h1 {
 .night  { background-color: rgba(44,  62,  80,  1.0); }
 .bright { background-color: rgba(243, 156, 18,  1.0); }
 
+.darken  { background-color: rgba(0,  0,   0,  0.2); }
+
 
 
 /* Background images */
@@ -218,18 +220,59 @@ section:last-of-type h1 {
 
 /* Custom Prism Stuff */
 .prism-viewport {
-    width:  100%;
-    height: 60%;
-    left: 0%;
-    top: 20%;
+    width:  90%;
+    height: 50%;
+    left: 5%;
+    top: 25%;
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.prism-viewport .front  { background: hsla( 000, 100%, 50%, 0.5 ); }
-.prism-viewport .back   { background: hsla( 090, 100%, 50%, 0.5 ); }
-.prism-viewport .top    { background: hsla( 180, 100%, 50%, 0.5 ); }
-.prism-viewport .bottom { background: hsla( 270, 100%, 50%, 0.5 ); }
+.rotate {
+    color: rgba(0,0,0,0.4);
+    text-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
+    font-size: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    display: block;
 
-.prism-viewport.prism-transparent .front  { background: hsla( 000, 100%, 50%, 0.5 ); }
-.prism-viewport.prism-transparent .back   { background: hsla( 090, 100%, 50%, 0.5 ); }
-.prism-viewport.prism-transparent .top    { background: hsla( 180, 100%, 50%, 0.5 ); }
-.prism-viewport.prism-transparent .bottom { background: hsla( 270, 100%, 50%, 0.5 ); }
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rotate-up {
+    top: 0;
+}
+
+.rotate-down {
+    bottom: 8px;
+}
+
+
+
+.prism-viewport p {
+    letter-spacing: -2px;
+    font-size: 4.65vw;
+    line-height: 8.7vw;
+    margin: 0;
+    text-align: center;
+}
+
+.prism-face {
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
