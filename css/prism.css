@@ -1,0 +1,162 @@
+/*!
+ * Prism CSS v0.0.1 (http://loomupandora.co.uk)
+ * Copyright 2014 James Aitken.
+ * Licensed under MIT
+ */
+
+
+.prism-container {
+    -webkit-perspective: 800px;
+       -moz-perspective: 800px;
+         -o-perspective: 800px;
+            perspective: 800px;
+
+    -webkit-perspective-origin: 50% 50%;
+       -moz-perspective-origin: 50% 50%;
+         -o-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+}
+
+.prism-viewport {
+    position: absolute;
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-transition: -webkit-transform 1s;
+       -moz-transition:    -moz-transform 1s;
+         -o-transition:      -o-transform 1s;
+            transition:         transform 1s;
+}
+
+.prism-viewport .prism-face {
+    display: block;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+
+.prism-viewport .prism-face {
+    width: 100%;
+    height: 100%;
+}
+
+.prism-viewport.prism-transparent .prism-face {
+    -webkit-backface-visibility: visible;
+       -moz-backface-visibility: visible;
+         -o-backface-visibility: visible;
+            backface-visibility: visible;
+}
+
+
+/*
+    translateZ doesn't work with percentages, as there is no percentage depth to move things by
+    We want to make the cube faces work based on either height of the face
+    Fake this by moving each face up or down by 50% of it's height, then rotating around its center axis
+    If we rotateX 90 degrees first, then translateY, this effectively turns translateY into translateZ
+    that is based around the height of the element we are transforming. Same principle for width.
+    We then rotate the face to it's correct orientation.
+
+    We can't put this rotation in a class that applies to all, as it overrides all the other transforms.
+*/
+
+
+/*
+    Effect:
+    Rotation of Zero degrees
+    Face placed at "Front" of the cube
+*/
+.prism-viewport .front  {
+  -webkit-transform: rotateX(-90deg) translateY(-50%) rotateX(90deg);
+     -moz-transform: rotateX(-90deg) translateY(-50%) rotateX(90deg);
+       -o-transform: rotateX(-90deg) translateY(-50%) rotateX(90deg);
+          transform: rotateX(-90deg) translateY(-50%) rotateX(90deg);
+}
+
+/*
+    Effect:
+    Rotation of 90 degrees
+    Face placed at "Top" of the cube
+*/
+.prism-viewport .top {
+    -webkit-transform: translateY(-50%) rotateX(90deg);
+       -moz-transform: translateY(-50%) rotateX(90deg);
+         -o-transform: translateY(-50%) rotateX(90deg);
+            transform: translateY(-50%) rotateX(90deg);
+}
+
+/* 
+    Effect:
+    Rotation of 180 degrees, face upside-down
+    Face placed at "Back" of the cube
+*/
+.prism-viewport .back   {
+    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
+       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
+         -o-transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
+            transform: rotateX(-90deg) translateY(50%) rotateX(-90deg);
+}
+
+
+/*
+    Effect:
+    Rotation of 270 degrees, face upside-down
+    Face placed at "Bottom" of the cube
+*/
+.prism-viewport .bottom {
+    -webkit-transform: translateY(50%) rotateX(270deg);
+       -moz-transform: translateY(50%) rotateX(270deg);
+         -o-transform: translateY(50%) rotateX(270deg);
+            transform: translateY(50%) rotateX(270deg);
+}
+
+
+
+
+/*
+    We put the prism faces in the correct place, now rotate the viewport to put them at the front
+    First cancel out the faked translateZ, then rotate to the relevant face.
+*/
+
+/* Effective rotation of 90 degrees */
+.prism-viewport.show-front {
+    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(90deg);
+       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(90deg);
+         -o-transform: rotateX(-90deg) translateY(50%) rotateX(90deg);
+            transform: rotateX(-90deg) translateY(50%) rotateX(90deg);
+}
+
+/*
+    Effective rotation of 0 degrees
+    Leave off the final rotation so we can rotate to it from the front / back in a sensible way
+    If we put zero in here, it will always rotate in a clockwise direction, which looks silly
+*/
+.prism-viewport.show-top {
+    -webkit-transform: rotateX(-90deg) translateY(50%);
+       -moz-transform: rotateX(-90deg) translateY(50%);
+         -o-transform: rotateX(-90deg) translateY(50%);
+            transform: rotateX(-90deg) translateY(50%);
+}
+
+/* Effective rotation of 270 degrees */
+.prism-viewport.show-back {
+    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
+       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
+         -o-transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
+            transform: rotateX(-90deg) translateY(50%) rotateX(270deg);
+}
+
+/* Effective rotation of 180 degrees */
+.prism-viewport.show-bottom {
+    -webkit-transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
+       -moz-transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
+         -o-transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
+            transform: rotateX(-90deg) translateY(50%) rotateX(180deg);
+}
+
