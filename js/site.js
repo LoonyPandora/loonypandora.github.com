@@ -20,32 +20,17 @@ $(document).ready(function () {
 
 
 function setupPrism() {
-    var $container = $(".prism-viewport");
-
-    var rotations = -1;
-
-    $(".rotate-up").on("click", function () {
-        rotations++;
-        rotatePrismUp($container, rotations);
-    });
+    var automatic = setInterval(rotatePrismUp, 2000);
 
     $(".prism-viewport").on("click", function () {
-        rotations++;
-        rotatePrismUp($container, rotations);
+        clearInterval(automatic);
+        $(this).addClass("prism-transparent");
+        rotatePrism(rotations);
     });
-
-    $(".rotate-down").on("click", function () {
-        rotations++;
-        rotatePrismDown($container, rotations);
-    })
 }
 
-function rotatePrismUp ($container, rotations) {
-    rotations++;
-
-    if (rotations % 4 === 0) {
-        $container.toggleClass("prism-transparent");
-    }
+function rotatePrism () {
+    var $container = $(".prism-viewport");
 
     if ($container.hasClass("show-front")) {
         $container.removeClass("show-front").addClass("show-top");
@@ -57,26 +42,6 @@ function rotatePrismUp ($container, rotations) {
         $container.removeClass("show-top").addClass("show-back");
     }
 }
-
-function rotatePrismDown ($container, rotations) {
-    rotations++;
-
-    if (rotations % 4 === 0) {
-        $container.toggleClass("prism-transparent");
-    }
-
-    if ($container.hasClass("show-front")) {
-        $container.removeClass("show-front").addClass("show-bottom");
-    } else if ($container.hasClass("show-bottom")) {
-        $container.removeClass("show-bottom").addClass("show-back");
-    } else if ($container.hasClass("show-back")) {
-        $container.removeClass("show-back").addClass("show-top");
-    } else if ($container.hasClass("show-top")) {
-        $container.removeClass("show-top").addClass("show-front");
-    }
-}
-
-
 
 
 
