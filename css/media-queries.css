@@ -30,7 +30,7 @@
 
     .quarter {
         font-size: 8vw;
-        width: 50%;
+        width: 12.5vw;
         height: 9.375vw;
         line-height: 9.375vw;
     }
@@ -49,22 +49,12 @@
     }
     
     .recent-tracks {
-        width: 26vw;
+        width: 25.4vw;
     }
 
-    .recent-tracks li, .recent-tracks li a {
-        opacity: 0.5;
-        width: 6.35vw;
-        height: 6.3vw;
-    }
-
-    .recent-tracks .metadata {
-        height: 6.3vw;
-        width: 19vw;
-        padding: 0.95vw;
-        font-size: 1.1vw;
-        line-height: 1.4vw;
-        opacity: 1;
+    .recent-tracks li, .recent-tracks li a  {
+        width: 6.34vw;
+        height: 6.34vw;
     }
 
 }
