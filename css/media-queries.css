@@ -49,12 +49,12 @@
     }
     
     .recent-tracks {
-        width: 25.4vw;
+        width: 25.5vw;
     }
 
     .recent-tracks li, .recent-tracks li a  {
-        width: 6.34vw;
-        height: 6.34vw;
+        width: 6.35vw;
+        height: 6.35vw;
     }
 
 }
