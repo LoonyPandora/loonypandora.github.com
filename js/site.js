@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 
 function setupPrism() {
-    var automatic = setInterval(rotatePrismUp, 2000);
+    var automatic = setInterval(rotatePrism, 2000);
 
     $(".prism-viewport").on("click", function () {
         clearInterval(automatic);
