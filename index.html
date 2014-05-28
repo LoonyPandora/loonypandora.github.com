@@ -59,8 +59,8 @@
         <a href="mailto:loonypandora@gmail.com" class="fa fa-envelope quarter"></a>
     </section>
 
-    <section class="night">
-        <ul class="recent-tracks"></ol>
+    <section class="recent-section night">
+        <ol class="recent-tracks"></ol>
     </section>
 
     <section class="warm">
@@ -134,15 +134,17 @@
 
     <!-- Mustache Templates -->
     <script id="recent-tracks-template" type="text/template">
-        <li style="background-image: url('{{ img }}')">
-            <a href="#" title="{{ artist }} – {{ track }}. From the album '{{ album }}' Played {{ date }} UTC"></a>
+        <li>
+            <a style="background-image: url('{{ thumbnail }}')" data-artist="{{ artist }}" data-track="{{ track }}" data-thumbnail="{{ thumbnail }}" data-img="{{ img }}" datetime="{{ utcDate }}">
+                {{ track }} by {{ artist }} played on {{ humanDate }}
+            </a>
         </li>
     </script>
 
     <script id="recent-tracks-metadata" type="text/template">
-        <li class="metadata">
-            {{ artist }}<br>{{ track }}<br><span class="play-time">{{ humanDate }}</span>
-        </li>
+        <div style="background-image: url('{{ img }}')" class="recent metadata">
+            <p>{{ artist }}<br>{{ track }}<br><span class="play-time">{{ timeAgo }}</span></p>
+        </div>
     </script>
 
     <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>

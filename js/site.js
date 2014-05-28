@@ -1,11 +1,7 @@
 "use strict";
 
 $(document).ready(function () {
-    $("body").click(function () {
-        $(".recent-tracks li").removeClass("selected");
-    });
-
-    getRecentTracks(9);
+    getRecentTracks(12);
 
     setupPrism();
 
@@ -19,14 +15,6 @@ $(document).ready(function () {
     var grid = new hashgrid();
 });
 
-
-function forceRepaint() {
-    var ss = document.styleSheets[0];
-    try {
-        ss.addRule('.xxxxxx', 'position: relative');
-        ss.removeRule(ss.rules.length - 1);
-    } catch(e) {}
-}
 
 function setupPrism() {
     var $container = $(".prism-viewport");
@@ -127,10 +115,11 @@ function getRecentTracks (limit) {
                 url: track.url,
                 artist: track.artist["#text"],
                 track: track.name,
-                album: track.album["#text"],
-                date: momentDate.format("ddd, MMM Do YYYY, h:mm a"),
-                humanDate: momentDate.fromNow(),
-                img: track.image[2]["#text"],
+                humanDate: momentDate.format("ddd, MMM Do YYYY, h:mm a"),
+                utcDate: momentDate.toISOString(),
+                timeAgo: momentDate.fromNow(),
+                thumbnail: track.image[2]["#text"],
+                img: track.image[3]["#text"],
             });
 
             $(".recent-tracks").append(
@@ -138,10 +127,35 @@ function getRecentTracks (limit) {
             );
         });
 
+        $(".recent-tracks li a").on("click", function () {
+            var $meta = $("#recent-tracks-metadata").html();
+
+            var momentDate = moment.utc($(this).attr("datetime"));
+
+            $(".recent.metadata").remove();
+
+            $(".recent-section").append(
+                Mustache.render($meta, {
+                    artist: $(this).data("artist"),
+                    track: $(this).data("track"),
+                    img: $(this).data("img") || $(this).data("thumbnail"),
+                    timeAgo: momentDate.fromNow()
+                })
+            );
+
+            // $(".recent-tracks li.selected").remove();
+            // $(this).parent("li").clone().addClass("selected").appendTo(".recent-tracks");
+        });
+
+        // $(".recent-tracks li.selected a").on("click", function () {
+        //     console.log(this);
+        //     $(this).parent("li").removeClass("selected");
+        // });
+
         // Add the metadata about the currently playing track and show it
-        $(".recent-tracks").append(
-            Mustache.render($("#recent-tracks-metadata").html(), renderData.slice(-1)[0])
-        ).addClass("animated fadeIn");
+        // $(".recent-tracks").append(
+        //     Mustache.render($("#recent-tracks-metadata").html(), renderData.slice(-1)[0])
+        // ).addClass("animated fadeIn");
 
     });
 
@@ -153,6 +167,14 @@ function getRecentTracks (limit) {
 
 
 // Workaround Safari issue where elements are not repainted
+function forceRepaint() {
+    var ss = document.styleSheets[0];
+    try {
+        ss.addRule('.xxxxxx', 'position: relative');
+        ss.removeRule(ss.rules.length - 1);
+    } catch(e) {}
+}
+
 function repaintOnResize (selector) {
     $(window).resize(function() {
         $(selector).css("z-index", 1);
