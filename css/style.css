@@ -93,7 +93,7 @@ h1 {
     z-index: 1;
     position: absolute;
     background-size: cover;
-
+    background-color: rgba(0,0,0,0.8);
     -webkit-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
        -moz-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
