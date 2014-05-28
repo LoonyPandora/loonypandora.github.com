@@ -25,7 +25,7 @@ function setupPrism() {
     $(".prism-viewport").on("click", function () {
         clearInterval(automatic);
         $(this).addClass("prism-transparent");
-        rotatePrism(rotations);
+        rotatePrism();
     });
 }
 
