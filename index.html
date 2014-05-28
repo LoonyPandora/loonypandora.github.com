@@ -135,7 +135,7 @@
     <!-- Mustache Templates -->
     <script id="recent-tracks-template" type="text/template">
         <li>
-            <a style="background-image: url('{{ thumbnail }}')" data-artist="{{ artist }}" data-track="{{ track }}" data-thumbnail="{{ thumbnail }}" data-img="{{ img }}" datetime="{{ utcDate }}">
+            <a title="{{ track }} by {{ artist }} played on {{ humanDate }}" style="background-image: url('{{ thumbnail }}')" data-artist="{{ artist }}" data-track="{{ track }}" data-thumbnail="{{ thumbnail }}" data-img="{{ img }}" datetime="{{ utcDate }}">
                 {{ track }} by {{ artist }} played on {{ humanDate }}
             </a>
         </li>
