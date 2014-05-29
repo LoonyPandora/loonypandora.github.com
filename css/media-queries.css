@@ -1,23 +1,52 @@
+
+/* Default non-media query size */
+h1 {
+    font-size: 10vw;
+    line-height: 12.5vw;
+    padding: 1.1vw 0 0 1.8vw;
+}
+
+/* My name is a two-liner, not 3 like the rest. Size accordingly */
+.my-name h1 {
+    padding: 2.8vw 0 0 0;
+    margin: 0 0 0 -5px;
+    font-size: 6vw;
+    line-height: 6vw;
+}
+
+
 @media screen and (min-width: 900px) {
-    p  {
-        font-size: 1.65vw;
-        line-height: 2vw;
+    /* 4:3 Ratio */
+    section, section > a {
+        width: 25vw;
+        height: 18.75vw;
     }
 
-    section {
-        width: 33.333vw;
-        height: 26.666vw;
+    .quarter {
+        font-size: 7vw;
+        width: 12.5vw;
+        height: 9.375vw;
+        line-height: 9.375vw;
     }
 
     .headshot {
-        display: block;
-        margin-top: -2vw;
-        width: 33.333vw;
+        margin-top: -1.5vw;
+        width: 25vw;
     }
 
     h1 {
-        font-size: 6.66666vw;
-        line-height: 8.33333vw;
+        position: absolute;
+        font-size: 4.65vw;
+        line-height: 5.3vw;
+    }
+    
+    .recent-tracks {
+        width: 25.5vw;
+    }
+
+    .recent-tracks li, .recent-tracks li a  {
+        width: 6.35vw;
+        height: 6.35vw;
     }
 }
 
@@ -29,23 +58,28 @@
     }
 
     .quarter {
-        font-size: 8vw;
+        font-size: 7vw;
         width: 12.5vw;
         height: 9.375vw;
         line-height: 9.375vw;
     }
 
     .headshot {
-        display: block;
         margin-top: -1.5vw;
         width: 25vw;
     }
 
+    h1, .prism-viewport p {
+        font-size: 4.65vw;
+    }
+
+    .prism-viewport p {
+        line-height: 8.7vw;
+    }
+
     h1 {
         position: absolute;
-        z-index: 2;
-        font-size: 4.65vw;
-        line-height: 5.25vw;
+        line-height: 5.3vw;
     }
     
     .recent-tracks {
