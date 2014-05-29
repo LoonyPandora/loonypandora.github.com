@@ -169,7 +169,9 @@ h1 {
 
 
 /* Background images */
-.background:before {
+.background-football:before,
+.background-onion:before,
+.background-thames:before {
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center center;
