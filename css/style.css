@@ -1,61 +1,90 @@
 
 
-* {
+/* Global Setup */
+html, body, section, div, h1, p, img, a {
     box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
+
 body {
-    color: rgba(255,255,255,1);
     font-weight: bold;
-    font-family: "Helvetica Neue";
+    color: rgba(255, 255, 255, 1);
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
 }
 
+
+/* Link Styles */
 a {
     display: block;
-/*    background-color: rgba(0,0,0,0.5);*/
     -webkit-transition: text-shadow 0.1s linear;
        -moz-transition: text-shadow 0.1s linear;
         -ms-transition: text-shadow 0.1s linear;
             transition: text-shadow 0.1s linear;
 }
 
-a, a:visited {
+a, a:visited, a:active  {
     color: rgba(255,255,255,1);
     text-decoration: none;
 }
 
 a:hover {
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1), 0px 0px 10px rgba(255,255,255, 0.7);
-    color: rgba(255,255,255,1);
 }
 
-a:active {
-    color: rgba(255,255,255,1);
-}
 
-.quarter {
-    text-align: center;
-    display: block;
-    float: left;
-}
-
+/* Global section styles */
 section {
     position: relative;
     float: left;
     overflow: hidden;
 }
 
+/* TODO: Make this based on the section id */
+.quarter {
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+/* Headers */
+
+/* Make the name panel stand out a little. Most important thing on the page */
+.my-name h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgba(0,0,0,0.4);
+    text-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
+}
+
+section:last-of-type h1 {
+    letter-spacing: 0;
+    font-size: 1.5vw;
+    line-height: 18vw;
+    padding: 0;
+    display: block;
+    width: 100%;
+    color: black;
+    text-align: center;
+    text-shadow: none;
+}
+
 h1 {
     letter-spacing: -2px;
-    margin: 0;
-    text-rendering: optimizeLegibility;
+    margin:  0;
+    padding: 0;
 }
 
 
 
-/* Recent Tracks */
 
+
+
+
+
+/* Recent Tracks */
 
 .recent-tracks {
     position: relative;
@@ -140,23 +169,26 @@ h1 {
 
 
 /* Background images */
-.background {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 70%;
-    position: relative;
-}
 
-.background-football {
+.background-football:before {
     background-image: url("/img/football.svg");
 }
 
-.background-onion {
+.background-onion:before {
     background-image: url("/img/onion.svg");
-    background-size: 75%;
 }
 
+.background-football:before,
+.background-onion:before {
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: '';
+}
+
+.background-football:before,
 .background-clock:before,
+.background-onion:before,
 .background-heart:before {
     position: absolute;
     top: 0;
@@ -166,7 +198,7 @@ h1 {
     text-align: center;
     height: 18.75vw;
     line-height: 18.75vw;
-    font-size: 18.75vw;
+    font-size: 17.5vw;
     text-shadow: none;
     color: rgba(0,0,0,0.1);
 }
@@ -183,31 +215,6 @@ h1 {
 
 
 
-/* Make the name panel stand out a little. Most important thing on the page */
-
-.my-name h1 {
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: rgba(0,0,0,0.4);
-    text-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
-}
-
-
-
-
-
-section:last-of-type h1 {
-    letter-spacing: 0;
-    font-size: 1.5vw;
-    line-height: 18vw;
-    padding: 0;
-    display: block;
-    width: 100%;
-    color: black;
-    text-align: center;
-    text-shadow: none;
-}
 
 
 
@@ -216,6 +223,7 @@ section:last-of-type h1 {
 
 
 /* Custom Prism Stuff */
+
 .prism-viewport {
     width:  90%;
     height: 50%;
@@ -223,43 +231,17 @@ section:last-of-type h1 {
     top: 25%;
     cursor: pointer;
 
+    /* 
+        Perhaps bad practice to disable text-selection, 
+        but this is an element likely to attract clicks in rapid succession to rotate it faster,
+        thus resulting in accidental text-selection. Benefits outweight the costs, I think
+    */
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
 }
-
-.rotate {
-    color: rgba(0,0,0,0.4);
-    text-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
-    font-size: 40px;
-    line-height: 40px;
-    cursor: pointer;
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    display: block;
-
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.rotate-up {
-    top: 0;
-}
-
-.rotate-down {
-    bottom: 8px;
-}
-
-
 
 .prism-viewport p {
     letter-spacing: -2px;
