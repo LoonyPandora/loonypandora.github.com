@@ -169,6 +169,12 @@ h1 {
 
 
 /* Background images */
+.background:before {
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: '';
+}
 
 .background-football:before {
     background-image: url("/img/football.svg");
@@ -178,14 +184,14 @@ h1 {
     background-image: url("/img/onion.svg");
 }
 
-.background-football:before,
-.background-onion:before {
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    content: '';
+.background-thames:before {
+    background-position: 35% center;
+    background-size: 150%;
+    background-image: url("/img/thames.svg");
 }
 
+
+.background-thames:before,
 .background-football:before,
 .background-clock:before,
 .background-onion:before,
