@@ -33,6 +33,16 @@ a:hover {
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1), 0px 0px 10px rgba(255,255,255, 0.7);
 }
 
+p {
+    text-shadow: none;
+    font-weight: normal;
+    letter-spacing: 0;
+    padding: 20px 20px 0 20px;
+    margin: 0;
+    line-height: 1.4vw;
+    font-size: 1.25vw;
+}
+
 
 /* Global section styles */
 section {
@@ -267,6 +277,7 @@ h1 {
 }
 
 .prism-viewport p {
+    font-weight: bold !important;
     letter-spacing: -2px;
     margin: 0;
     text-align: center;
