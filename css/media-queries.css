@@ -7,7 +7,7 @@ h1 {
 }
 
 /* My name is a two-liner, not 3 like the rest. Size accordingly */
-.my-name h1 {
+#my-name h1 {
     padding: 2.8vw 0 0 0;
     margin: 0 0 0 -5px;
     font-size: 6vw;
@@ -29,7 +29,8 @@ h1 {
         line-height: 9.375vw;
     }
 
-    .headshot {
+    #photo-headshot img,
+    #avatar-image img {
         margin-top: -1.5vw;
         width: 25vw;
     }
@@ -64,7 +65,8 @@ h1 {
         line-height: 9.375vw;
     }
 
-    .headshot {
+    #photo-headshot img,
+    #avatar-image img {
         margin-top: -1.5vw;
         width: 25vw;
     }

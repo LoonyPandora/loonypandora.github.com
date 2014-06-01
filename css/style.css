@@ -51,13 +51,26 @@ section {
 /* Headers */
 
 /* Make the name panel stand out a little. Most important thing on the page */
-.my-name h1 {
+#my-name {
+    background-color: rgba(192, 57, 43,   1.0);
+}
+
+#my-name h1 {
     display: block;
     width: 100%;
     text-align: center;
     color: rgba(0,0,0,0.4);
     text-shadow: rgba(255, 255, 255, 0.1) 0 1px 0;
 }
+
+#avatar-image {
+    background-color: rgba(44,  62,  80,  1.0);
+}
+
+#available-for-hire {
+    background-color: rgba(243, 156, 18,  1.0);
+}
+
 
 section:last-of-type h1 {
     letter-spacing: 0;
@@ -129,6 +142,7 @@ h1 {
 }
 
 .recent.metadata p {
+    font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     margin: 0;
